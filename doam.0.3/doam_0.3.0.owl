@@ -1,0 +1,807 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.openriskplatform.org/ns/doam#"
+     xml:base="http://www.openriskplatform.org/ns/doam"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:doam="http://www.openriskplatform.org/ns/doam#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="http://www.openriskplatform.org/ns/doam#">
+        <owl:versionIRI rdf:resource="http://www.openriskplatform.org/ns/doam/0.3"/>
+        <dc:creator>Open Risk</dc:creator>
+        <dc:description>The Description of a Model (DOAM) risk model ontology, described using W3C RDF Schema and the Web Ontology Language OWL. 
+
+DOAM was inspired by the Description of a Project (DOAP) vocubulary developed by Edd Dumbill that was used for the annotation of open source python applications
+
+Release Notes:
+- Version 0.3 captures the distinction of Abstract Models, Specified Models, Model Source Code and Model Instances
+
+	</dc:description>
+        <dc:format>application/rdf+xml</dc:format>
+        <dc:rights>Copyright © 2015-2019 Open Risk</dc:rights>
+        <dc:title rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Description of a Model (DOAM). A Risk Model Ontology</dc:title>
+        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">We welcome contributors to the Risk Ontology!</terms:contributor>
+        <terms:license rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Creative Commons Attribution 3.0 (CC BY 3.0)</terms:license>
+        <terms:provenance rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v0.3 Significant expansion of the Risk Model Ontology to capture difference aspects in more refined manner
+
+v0.2.8 First reasonably complete release</terms:provenance>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">The Risk Model Ontology is still in active development. Feedback, ideas, use cases are encouraged</rdfs:comment>
+        <rdfs:seeAlso rdf:resource="https://www.openriskmanual.org/wiki/Category:Risk_Model_Ontology"/>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.3</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/format -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/format"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/rights -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/rights"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/contributor -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/provenance -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/provenance"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.openriskplatform.org/ns/doam#author -->
+
+    <owl:ObjectProperty rdf:about="http://www.openriskplatform.org/ns/doam#author">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.openriskplatform.org/ns/doam#AbstractModel"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.openriskplatform.org/ns/doam#author"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <owl:propertyDisjointWith rdf:resource="http://www.openriskplatform.org/ns/doam#validator"/>
+        <dc:description>Any person that is the author of an abstract model specification (e.g. a paper where the model is specified,  conceptually and mathematically)</dc:description>
+        <rdfs:label>author</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.openriskplatform.org/ns/doam#definition -->
+
+    <owl:ObjectProperty rdf:about="http://www.openriskplatform.org/ns/doam#definition">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.openriskplatform.org/ns/doam#RiskModel"/>
+        <rdfs:range rdf:resource="http://www.openriskplatform.org/ns/doam#AbstractModel"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.openriskplatform.org/ns/doam#developer -->
+
+    <owl:ObjectProperty rdf:about="http://www.openriskplatform.org/ns/doam#developer">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.openriskplatform.org/ns/doam#ModelImplementation"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <dc:description>Developer is any person who contributed to the development of a full specification and implementation of an abstract model. Has authored segments of its source code distribution</dc:description>
+        <rdfs:label>developer</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.openriskplatform.org/ns/doam#documenter -->
+
+    <owl:ObjectProperty rdf:about="http://www.openriskplatform.org/ns/doam#documenter">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.openriskplatform.org/ns/doam#ModelImplementation"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <dc:description>Contributor to the documentation of the model implementation</dc:description>
+        <rdfs:label>documenter</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.openriskplatform.org/ns/doam#hasAbstractModel -->
+
+    <owl:ObjectProperty rdf:about="http://www.openriskplatform.org/ns/doam#hasAbstractModel">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.openriskplatform.org/ns/doam#RiskModel"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.openriskplatform.org/ns/doam#hasAbstractModel"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.openriskplatform.org/ns/doam#AbstractModel"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.openriskplatform.org/ns/doam#hasAbstractModel"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#range"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.openriskplatform.org/ns/doam#hasAbstractModel"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.openriskplatform.org/ns/doam#AbstractModel"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <rdfs:comment>Each risk Model must have exactly one Abstract Model Representation</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.openriskplatform.org/ns/doam#hasModelImplementation -->
+
+    <owl:ObjectProperty rdf:about="http://www.openriskplatform.org/ns/doam#hasModelImplementation">
+        <rdfs:domain rdf:resource="http://www.openriskplatform.org/ns/doam#RiskModel"/>
+        <rdfs:range rdf:resource="http://www.openriskplatform.org/ns/doam#ModelImplementation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.openriskplatform.org/ns/doam#hasModelSpecification -->
+
+    <owl:ObjectProperty rdf:about="http://www.openriskplatform.org/ns/doam#hasModelSpecification">
+        <rdfs:domain rdf:resource="http://www.openriskplatform.org/ns/doam#RiskModel"/>
+        <rdfs:range rdf:resource="http://www.openriskplatform.org/ns/doam#ModelSpecification"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.openriskplatform.org/ns/doam#instance -->
+
+    <owl:ObjectProperty rdf:about="http://www.openriskplatform.org/ns/doam#instance">
+        <rdfs:domain rdf:resource="http://www.openriskplatform.org/ns/doam#RiskModel"/>
+        <rdfs:range rdf:resource="http://www.openriskplatform.org/ns/doam#ModelInstance"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.openriskplatform.org/ns/doam#isImplementing -->
+
+    <owl:ObjectProperty rdf:about="http://www.openriskplatform.org/ns/doam#isImplementing">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.openriskplatform.org/ns/doam#modelImplementation"/>
+        <rdfs:domain rdf:resource="http://www.openriskplatform.org/ns/doam#ModelImplementation"/>
+        <rdfs:range rdf:resource="http://www.openriskplatform.org/ns/doam#RiskModel"/>
+        <rdfs:comment>An abstract model description that the source code implements. It is a reference to a fully 
+defined abstract linked model</rdfs:comment>
+        <rdfs:label>implements</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.openriskplatform.org/ns/doam#maintainer -->
+
+    <owl:ObjectProperty rdf:about="http://www.openriskplatform.org/ns/doam#maintainer">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.openriskplatform.org/ns/doam#ModelImplementation"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <dc:description>Maintainer of a source code distribution of given model</dc:description>
+        <rdfs:label>maintainer</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.openriskplatform.org/ns/doam#modelCategory -->
+
+    <owl:ObjectProperty rdf:about="http://www.openriskplatform.org/ns/doam#modelCategory">
+        <rdfs:domain rdf:resource="http://www.openriskplatform.org/ns/doam#RiskModel"/>
+        <rdfs:range rdf:resource="http://www.openriskplatform.org/ns/doam#RiskCategory"/>
+        <dc:description>The model category (classification by risk model type)</dc:description>
+        <rdfs:label>category</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.openriskplatform.org/ns/doam#modelImplementation -->
+
+    <owl:ObjectProperty rdf:about="http://www.openriskplatform.org/ns/doam#modelImplementation">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.openriskplatform.org/ns/doam#RiskModel"/>
+        <rdfs:range rdf:resource="http://www.openriskplatform.org/ns/doam#ModelImplementation"/>
+        <dc:description>The source code distribution that implements the abstract model</dc:description>
+        <rdfs:label>isImplementedBy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.openriskplatform.org/ns/doam#repository -->
+
+    <owl:ObjectProperty rdf:about="http://www.openriskplatform.org/ns/doam#repository">
+        <rdfs:domain rdf:resource="http://www.openriskplatform.org/ns/doam#ModelImplementation"/>
+        <rdfs:range rdf:resource="http://www.openriskplatform.org/ns/doam#Repository"/>
+        <dc:description>Source code repository</dc:description>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.openriskplatform.org/ns/doam#scope -->
+
+    <owl:ObjectProperty rdf:about="http://www.openriskplatform.org/ns/doam#scope">
+        <rdfs:domain rdf:resource="http://www.openriskplatform.org/ns/doam#AbstractModel"/>
+        <rdfs:range rdf:resource="http://www.openriskplatform.org/ns/doam#Scope"/>
+        <dc:description>The scope of the model application (type of product, portfolio etc.)</dc:description>
+        <rdfs:label>scope</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.openriskplatform.org/ns/doam#tester -->
+
+    <owl:ObjectProperty rdf:about="http://www.openriskplatform.org/ns/doam#tester">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.openriskplatform.org/ns/doam#ModelImplementation"/>
+        <rdfs:domain rdf:resource="http://www.openriskplatform.org/ns/doam#ModelInstance"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <dc:description>A tester is a programmer or other qualified quality control person that is responsible for the 
+integrity of the source code distribution of a model implementation or a model instance</dc:description>
+        <rdfs:label>tester</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.openriskplatform.org/ns/doam#validator -->
+
+    <owl:ObjectProperty rdf:about="http://www.openriskplatform.org/ns/doam#validator">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.openriskplatform.org/ns/doam#AbstractModel"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <dc:description>An analyst or other qualified individual providing peer review and validation of an abstract model specification</dc:description>
+        <rdfs:label>validator</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.openriskplatform.org/ns/doam#creationDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.openriskplatform.org/ns/doam#creationDate">
+        <rdfs:domain rdf:resource="http://www.openriskplatform.org/ns/doam#AbstractModel"/>
+        <rdfs:domain rdf:resource="http://www.openriskplatform.org/ns/doam#ModelImplementation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <dc:description>The date on which a particular abstract model or source code distribution is released</dc:description>
+        <rdfs:comment>A Model Instance does not have a creation date as instances will have a regular down/up cycle. Usage of model instances tracked via user workflows
+
+For Abstract Models, the creation date indicates when the model has becomed linked with the formal documentation available in a linked URI. It does not refer to the time of first publication.</rdfs:comment>
+        <rdfs:label>creationDate</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.openriskplatform.org/ns/doam#dataEndPoint -->
+
+    <owl:DatatypeProperty rdf:about="http://www.openriskplatform.org/ns/doam#dataEndPoint">
+        <rdfs:domain rdf:resource="http://www.openriskplatform.org/ns/doam#DataInstance"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.openriskplatform.org/ns/doam#description -->
+
+    <owl:DatatypeProperty rdf:about="http://www.openriskplatform.org/ns/doam#description">
+        <rdfs:domain rdf:resource="http://www.openriskplatform.org/ns/doam#RiskModel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dc:description>Description of the model, code distribution or instance</dc:description>
+        <rdfs:label>description</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.openriskplatform.org/ns/doam#documentationURL -->
+
+    <owl:DatatypeProperty rdf:about="http://www.openriskplatform.org/ns/doam#documentationURL">
+        <rdfs:domain rdf:resource="http://www.openriskplatform.org/ns/doam#AbstractModel"/>
+        <rdfs:domain rdf:resource="http://www.openriskplatform.org/ns/doam#ModelImplementation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <dc:description>The location where documentation about the model or its implementation can be found</dc:description>
+        <rdfs:label>documentation</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.openriskplatform.org/ns/doam#inputDataEndPoint -->
+
+    <owl:DatatypeProperty rdf:about="http://www.openriskplatform.org/ns/doam#inputDataEndPoint">
+        <rdfs:domain rdf:resource="http://www.openriskplatform.org/ns/doam#ModelInstance"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <dc:description>The URI of a web resource where input data required for a model calculation are stored</dc:description>
+        <rdfs:label>inputDataEndPoint</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.openriskplatform.org/ns/doam#inputDataString -->
+
+    <owl:DatatypeProperty rdf:about="http://www.openriskplatform.org/ns/doam#inputDataString">
+        <rdfs:domain rdf:resource="http://www.openriskplatform.org/ns/doam#ModelInstance"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.openriskplatform.org/ns/doam#name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.openriskplatform.org/ns/doam#name">
+        <rdfs:domain rdf:resource="http://www.openriskplatform.org/ns/doam#RiskModel"/>
+        <rdfs:domain rdf:resource="http://www.openriskplatform.org/ns/doam#Version"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dc:description>The name of the model</dc:description>
+        <rdfs:comment>The name of a model, release etc.</rdfs:comment>
+        <rdfs:label>name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.openriskplatform.org/ns/doam#outputDataEndPoint -->
+
+    <owl:DatatypeProperty rdf:about="http://www.openriskplatform.org/ns/doam#outputDataEndPoint">
+        <rdfs:domain rdf:resource="http://www.openriskplatform.org/ns/doam#ModelInstance"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <dc:description>The URI of a web service endpoint where the data outputs of a Model Instance can be stored</dc:description>
+        <rdfs:label>outputDataEndPoint</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.openriskplatform.org/ns/doam#outputDataString -->
+
+    <owl:DatatypeProperty rdf:about="http://www.openriskplatform.org/ns/doam#outputDataString">
+        <rdfs:domain rdf:resource="http://www.openriskplatform.org/ns/doam#ModelInstance"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.openriskplatform.org/ns/doam#repositoryURL -->
+
+    <owl:DatatypeProperty rdf:about="http://www.openriskplatform.org/ns/doam#repositoryURL">
+        <rdfs:domain rdf:resource="http://www.openriskplatform.org/ns/doam#ModelImplementation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.openriskplatform.org/ns/doam#revision -->
+
+    <owl:DatatypeProperty rdf:about="http://www.openriskplatform.org/ns/doam#revision">
+        <rdfs:domain rdf:resource="http://www.openriskplatform.org/ns/doam#AbstractModel"/>
+        <rdfs:domain rdf:resource="http://www.openriskplatform.org/ns/doam#ModelImplementation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dc:description>The revision number of a model or source code version release</dc:description>
+        <rdfs:label>revision</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.openriskplatform.org/ns/doam#serviceEndPoint -->
+
+    <owl:DatatypeProperty rdf:about="http://www.openriskplatform.org/ns/doam#serviceEndPoint">
+        <rdfs:domain rdf:resource="http://www.openriskplatform.org/ns/doam#ModelInstance"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <dc:description>The URI of a web service endpoint where the Model Instance implementing an Abstract Model can be 
+accessed</dc:description>
+        <rdfs:label>serviceEndPoint</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.openriskplatform.org/ns/doam#shortdesc -->
+
+    <owl:DatatypeProperty rdf:about="http://www.openriskplatform.org/ns/doam#shortdesc">
+        <rdfs:domain rdf:resource="http://www.openriskplatform.org/ns/doam#RiskModel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dc:description>Short description of the model</dc:description>
+        <rdfs:label>shortdesc</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.openriskplatform.org/ns/doam#trainingURL -->
+
+    <owl:DatatypeProperty rdf:about="http://www.openriskplatform.org/ns/doam#trainingURL">
+        <rdfs:domain rdf:resource="http://www.openriskplatform.org/ns/doam#AbstractModel"/>
+        <rdfs:domain rdf:resource="http://www.openriskplatform.org/ns/doam#ModelImplementation"/>
+        <rdfs:domain rdf:resource="http://www.openriskplatform.org/ns/doam#ModelInstance"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <dc:description>The URL at which online training resources regarding an abstract model, its source code or a model instance can be found</dc:description>
+        <rdfs:label>training resource</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.openriskplatform.org/ns/doam#AbstractModel -->
+
+    <owl:Class rdf:about="http://www.openriskplatform.org/ns/doam#AbstractModel">
+        <dc:description>The theoretical (abstract) description of a distinct risk model. It is expressed as a document (paper, wiki page) that holds the human readable model specification (possibly including mathematical notation)</dc:description>
+        <rdfs:comment>The abstract model name can best be captured as the name of a vector valued function (with multiple possible inputs and outputs)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.openriskplatform.org/ns/doam#"/>
+        <rdfs:label>Abstract Model</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://www.openriskmanual.org/wiki/Abstract_Risk_Model"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.openriskplatform.org/ns/doam#DataInstance -->
+
+    <owl:Class rdf:about="http://www.openriskplatform.org/ns/doam#DataInstance">
+        <dc:description>A web service that provides access to a Risk Data set</dc:description>
+        <rdfs:comment>The abstract model name can best be captured as the name of a vector valued function (with multiple possible inputs and outputs)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.openriskplatform.org/ns/doam#"/>
+        <rdfs:label>Data Instance</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://www.openriskmanual.org/wiki/Abstract_Risk_Model"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.openriskplatform.org/ns/doam#DataSchema -->
+
+    <owl:Class rdf:about="http://www.openriskplatform.org/ns/doam#DataSchema">
+        <dc:description>The description of a distinct linked risk data set. It is a document (paper, wiki page) that holds the human readable schema that describes the data</dc:description>
+        <rdfs:comment>The abstract model name can best be captured as the name of a vector valued function (with multiple possible inputs and outputs)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.openriskplatform.org/ns/doam#"/>
+        <rdfs:label>Data Schema</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://www.openriskmanual.org/wiki/Abstract_Risk_Model"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.openriskplatform.org/ns/doam#GitBranch -->
+
+    <owl:Class rdf:about="http://www.openriskplatform.org/ns/doam#GitBranch">
+        <rdfs:subClassOf rdf:resource="http://www.openriskplatform.org/ns/doam#Repository"/>
+        <dc:description>Git source code branch</dc:description>
+        <rdfs:comment>The abstract model name can best be captured as the name of a vector valued function (with multiple possible inputs and outputs)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.openriskplatform.org/ns/doam#"/>
+        <rdfs:label>Git Branch</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.openriskplatform.org/ns/doam#ModelImplementation -->
+
+    <owl:Class rdf:about="http://www.openriskplatform.org/ns/doam#ModelImplementation">
+        <dc:description>The source code distribution and any other artefacts implementing an abstract model</dc:description>
+        <rdfs:comment>The name of the model source code is e.g. the name of the directory that contains the distribution. May include version information</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.openriskplatform.org/ns/doam#"/>
+        <rdfs:label>Model Implementation</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://www.openriskmanual.org/wiki/Model_Implementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.openriskplatform.org/ns/doam#ModelInstance -->
+
+    <owl:Class rdf:about="http://www.openriskplatform.org/ns/doam#ModelInstance">
+        <dc:description>A web application instance that makes an abstract model available by executing its programmatic implementation (whether compiled or interpreted)</dc:description>
+        <rdfs:comment>While risk models can be implemented in various forms, only risk models that are accessible (in-principle) online via a URL are considered - in line with the Risk Model Ontology being a web OWL ontology</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.openriskplatform.org/ns/doam#"/>
+        <rdfs:label>Model Instance</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://www.openriskmanual.org/wiki/Model_Instance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.openriskplatform.org/ns/doam#ModelSpecification -->
+
+    <owl:Class rdf:about="http://www.openriskplatform.org/ns/doam#ModelSpecification">
+        <dc:description>The full specification of an abstract risk model that identifies and links the model to concrete and observable risk data sources. It is expressed via enumerations of variable names.</dc:description>
+        <rdfs:comment>The abstract model name can best be captured as the name of a vector valued function (with multiple possible inputs and outputs)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.openriskplatform.org/ns/doam#"/>
+        <rdfs:label>Specified Model</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://www.openriskmanual.org/wiki/Model_Implementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.openriskplatform.org/ns/doam#Repository -->
+
+    <owl:Class rdf:about="http://www.openriskplatform.org/ns/doam#Repository">
+        <dc:description>Source code repository for the model</dc:description>
+        <rdfs:comment>NB: Might migrate to external description of software repositories as this is not unique to this domain</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.openriskplatform.org/ns/doam#"/>
+        <rdfs:label>Repository</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.openriskplatform.org/ns/doam#RiskCategory -->
+
+    <owl:Class rdf:about="http://www.openriskplatform.org/ns/doam#RiskCategory">
+        <dc:description>Model category to which this model belongs (type of model)</dc:description>
+        <rdfs:comment>Placeholder. For forward compatibility to link with risk taxonomy ontologies</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.openriskplatform.org/ns/riskcategory#"/>
+        <rdfs:label>Risk Category</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://www.openriskmanual.org/wiki/Risk_Taxonomy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.openriskplatform.org/ns/doam#RiskData -->
+
+    <owl:Class rdf:about="http://www.openriskplatform.org/ns/doam#RiskData">
+        <dc:description>A defined Risk Data set</dc:description>
+        <rdfs:comment>The abstract model name can best be captured as the name of a vector valued function (with multiple possible inputs and outputs)</rdfs:comment>
+        <rdfs:label>Risk Data</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://www.openriskmanual.org/wiki/Risk_Data"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.openriskplatform.org/ns/doam#RiskModel -->
+
+    <owl:Class rdf:about="http://www.openriskplatform.org/ns/doam#RiskModel">
+        <dc:description>The root class capturing all the elements of a risk model (theoretical concept, implementation and deployed instances)</dc:description>
+        <rdfs:isDefinedBy rdf:resource="http://www.openriskplatform.org/ns/doam#"/>
+        <rdfs:label>Risk Model</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://www.openriskmanual.org/wiki/Risk_Model"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.openriskplatform.org/ns/doam#Scope -->
+
+    <owl:Class rdf:about="http://www.openriskplatform.org/ns/doam#Scope">
+        <dc:description>Scope of model (application domain)</dc:description>
+        <rdfs:comment>Placeholder. For forward compatibility with scope taxonomies</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.openriskplatform.org/ns/scopetaxonomy#"/>
+        <rdfs:label>Scope</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.openriskplatform.org/ns/doam#Version -->
+
+    <owl:Class rdf:about="http://www.openriskplatform.org/ns/doam#Version">
+        <dc:description>Version information of a published abstract model or source code release</dc:description>
+        <rdfs:comment>Might migrate as not unique to this use case</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.openriskplatform.org/ns/doam#"/>
+        <rdfs:label>Version</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Person -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person">
+        <rdfs:label>foaf:Person</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.openriskplatform.org/ns/doam#CGIApp -->
+
+    <owl:NamedIndividual rdf:about="http://www.openriskplatform.org/ns/doam#CGIApp">
+        <rdf:type rdf:resource="http://www.openriskplatform.org/ns/doam#ModelInstance"/>
+        <isImplementing rdf:resource="http://www.openriskplatform.org/ns/doam#MultiStepMC"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.openriskplatform.org/ns/doam#CR -->
+
+    <owl:NamedIndividual rdf:about="http://www.openriskplatform.org/ns/doam#CR">
+        <rdf:type rdf:resource="http://www.openriskplatform.org/ns/doam#AbstractModel"/>
+        <creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2002-05-30T09:00:00</creationDate>
+        <description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Concentration Ratio (defined as the fraction...)</description>
+        <documentationURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.openrisk.eu</documentationURL>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.openriskplatform.org/ns/doam#ConcentrationLib -->
+
+    <owl:NamedIndividual rdf:about="http://www.openriskplatform.org/ns/doam#ConcentrationLib">
+        <rdf:type rdf:resource="http://www.openriskplatform.org/ns/doam#ModelImplementation"/>
+        <repository rdf:resource="http://www.openriskplatform.org/ns/doam#PythonConcentrationLib"/>
+        <creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2002-05-30T09:00:00</creationDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.openriskplatform.org/ns/doam#Concentration_Ratio -->
+
+    <owl:NamedIndividual rdf:about="http://www.openriskplatform.org/ns/doam#Concentration_Ratio">
+        <rdf:type rdf:resource="http://www.openriskplatform.org/ns/doam#RiskModel"/>
+        <definition rdf:resource="http://www.openriskplatform.org/ns/doam#CR"/>
+        <instance rdf:resource="http://www.openriskplatform.org/ns/doam#FlaskApp"/>
+        <modelImplementation rdf:resource="http://www.openriskplatform.org/ns/doam#PythonConcentrationLib"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.openriskplatform.org/ns/doam#CreditSim -->
+
+    <owl:NamedIndividual rdf:about="http://www.openriskplatform.org/ns/doam#CreditSim">
+        <rdf:type rdf:resource="http://www.openriskplatform.org/ns/doam#AbstractModel"/>
+        <inputDataEndPoint rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://192.168.2.4/input</inputDataEndPoint>
+        <outputDataEndPoint rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://192.168.2.4/output</outputDataEndPoint>
+        <serviceEndPoint rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://192.168.2.4/api/creditsim</serviceEndPoint>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.openriskplatform.org/ns/doam#Credit_Portfolio_Simulator -->
+
+    <owl:NamedIndividual rdf:about="http://www.openriskplatform.org/ns/doam#Credit_Portfolio_Simulator">
+        <rdf:type rdf:resource="http://www.openriskplatform.org/ns/doam#RiskModel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.openriskplatform.org/ns/doam#FlaskApp -->
+
+    <owl:NamedIndividual rdf:about="http://www.openriskplatform.org/ns/doam#FlaskApp">
+        <rdf:type rdf:resource="http://www.openriskplatform.org/ns/doam#ModelInstance"/>
+        <inputDataEndPoint rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"></inputDataEndPoint>
+        <outputDataEndPoint rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"></outputDataEndPoint>
+        <serviceEndPoint rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">192.168.2.4/api/cr</serviceEndPoint>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.openriskplatform.org/ns/doam#HHI -->
+
+    <owl:NamedIndividual rdf:about="http://www.openriskplatform.org/ns/doam#HHI">
+        <rdf:type rdf:resource="http://www.openriskplatform.org/ns/doam#AbstractModel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.openriskplatform.org/ns/doam#HHI_Index -->
+
+    <owl:NamedIndividual rdf:about="http://www.openriskplatform.org/ns/doam#HHI_Index">
+        <rdf:type rdf:resource="http://www.openriskplatform.org/ns/doam#RiskModel"/>
+        <hasAbstractModel rdf:resource="http://www.openriskplatform.org/ns/doam#HHI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.openriskplatform.org/ns/doam#HK -->
+
+    <owl:NamedIndividual rdf:about="http://www.openriskplatform.org/ns/doam#HK">
+        <rdf:type rdf:resource="http://www.openriskplatform.org/ns/doam#AbstractModel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.openriskplatform.org/ns/doam#Hannah-Kay_Index -->
+
+    <owl:NamedIndividual rdf:about="http://www.openriskplatform.org/ns/doam#Hannah-Kay_Index">
+        <rdf:type rdf:resource="http://www.openriskplatform.org/ns/doam#RiskModel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.openriskplatform.org/ns/doam#MultiStepMC -->
+
+    <owl:NamedIndividual rdf:about="http://www.openriskplatform.org/ns/doam#MultiStepMC">
+        <rdf:type rdf:resource="http://www.openriskplatform.org/ns/doam#ModelImplementation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.openriskplatform.org/ns/doam#PortfolioLoss -->
+
+    <owl:NamedIndividual rdf:about="http://www.openriskplatform.org/ns/doam#PortfolioLoss">
+        <rdf:type rdf:resource="http://www.openriskplatform.org/ns/doam#AbstractModel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.openriskplatform.org/ns/doam#PythonConcentrationLib -->
+
+    <owl:NamedIndividual rdf:about="http://www.openriskplatform.org/ns/doam#PythonConcentrationLib">
+        <rdf:type rdf:resource="http://www.openriskplatform.org/ns/doam#GitBranch"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.openriskplatform.org/ns/doam#Shannon -->
+
+    <owl:NamedIndividual rdf:about="http://www.openriskplatform.org/ns/doam#Shannon">
+        <rdf:type rdf:resource="http://www.openriskplatform.org/ns/doam#AbstractModel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.openriskplatform.org/ns/doam#Shannon_Index -->
+
+    <owl:NamedIndividual rdf:about="http://www.openriskplatform.org/ns/doam#Shannon_Index">
+        <rdf:type rdf:resource="http://www.openriskplatform.org/ns/doam#RiskModel"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
