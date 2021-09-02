@@ -1,0 +1,2611 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://www.openriskmanual.org/ns/doam#"
+     xml:base="https://www.openriskmanual.org/ns/doam"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:bibo="http://purl.org/ontology/bibo/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:term="http://purl.org/dc/terms/"
+     xmlns:bibo1="https://www.openriskmanual.org/ns/doam#bibo:"
+     xmlns:x_1.1="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="https://www.openriskmanual.org/ns/doam#">
+        <owl:versionIRI rdf:resource="https://www.openriskmanual.org/ns/doam/0.4"/>
+        <x_1.1:abstract>The Description of a Model (DOAM) risk model ontology, described using W3C RDF Schema and the Web Ontology Language OWL. 
+
+DOAM is used in the Open Risk Manual to organize the semantic annotation of risk model concepts
+
+DOAM was inspired by the Description of a Project (DOAP) vocubulary developed by Edd Dumbill that was used for the annotation of open source python applications</x_1.1:abstract>
+        <x_1.1:creator>Open Risk</x_1.1:creator>
+        <x_1.1:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Description of a Model (DOAM) risk model ontology, described using W3C RDF Schema and the Web Ontology Language OWL.</x_1.1:description>
+        <x_1.1:format>application/rdf+xml</x_1.1:format>
+        <x_1.1:rights>Copyright © 2015-2021 Open Risk</x_1.1:rights>
+        <x_1.1:title rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Description of a Model (DOAM). A Risk Model Ontology</x_1.1:title>
+        <term:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">We welcome contributors to the Risk Model Ontology!</term:contributor>
+        <term:license rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Creative Commons Attribution 3.0 (CC BY 3.0)</term:license>
+        <term:provenance rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v0.4.2 Expands Scorecard semantics
+
+v0.4 Introduces PMML semantics
+
+v0.3.2 Split out Risk Data related concepts into the RDO ontology
+
+v0.3 Significant expansion of the Risk Model Ontology to capture different model aspects in more refined manner. Version 0.3 captures the distinction of Abstract Models, Specified Models, Model Source Code and Model Instances
+
+v0.2.8 First reasonably complete release</term:provenance>
+        <bibo:status>Draft</bibo:status>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">The Risk Model Ontology is still in active development. Feedback, ideas, use cases are encouraged</rdfs:comment>
+        <rdfs:seeAlso rdf:resource="https://www.openriskmanual.org/wiki/Category:Risk_Model_Ontology"/>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.4</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/abstract -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/abstract"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/format -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/format"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/rights -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/rights"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/contributor -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/provenance -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/provenance"/>
+    
+
+
+    <!-- http://purl.org/ontology/bibo/status -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/ontology/bibo/status"/>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#bibo:status -->
+
+    <owl:AnnotationProperty rdf:about="https://www.openriskmanual.org/ns/doam#bibo:status"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#dateTime -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime">
+        <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#hasAbstractModel -->
+
+    <owl:ObjectProperty rdf:about="https://www.openriskmanual.org/ns/doam#hasAbstractModel">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#RiskModel"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.openriskmanual.org/ns/doam#hasAbstractModel"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://www.openriskmanual.org/ns/doam#AbstractModel"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/doam#"/>
+        <rdfs:label>has abstract model</rdfs:label>
+    </owl:ObjectProperty>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://www.openriskmanual.org/ns/doam#hasAbstractModel"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#range"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.openriskmanual.org/ns/doam#hasAbstractModel"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://www.openriskmanual.org/ns/doam#AbstractModel"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <rdfs:comment>Each risk Model must have exactly one Abstract Model Representation</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#hasAuthor -->
+
+    <owl:ObjectProperty rdf:about="https://www.openriskmanual.org/ns/doam#hasAuthor">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#AbstractModel"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.openriskmanual.org/ns/doam#hasAuthor"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <owl:propertyDisjointWith rdf:resource="https://www.openriskmanual.org/ns/doam#hasValidator"/>
+        <x_1.1:description>Any person that is the author of an abstract model specification (e.g. a paper where the model is specified,  conceptually and mathematically)</x_1.1:description>
+        <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/doam#"/>
+        <rdfs:label>has author</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#hasDefinition -->
+
+    <owl:ObjectProperty rdf:about="https://www.openriskmanual.org/ns/doam#hasDefinition">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#RiskModel"/>
+        <rdfs:range rdf:resource="https://www.openriskmanual.org/ns/doam#AbstractModel"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/doam#"/>
+        <rdfs:label>has model definition</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#hasDeveloper -->
+
+    <owl:ObjectProperty rdf:about="https://www.openriskmanual.org/ns/doam#hasDeveloper">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#ModelImplementation"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <x_1.1:description>Developer is any person who contributed to the development of a full specification and implementation of an abstract model. Has authored segments of its source code distribution</x_1.1:description>
+        <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/doam#"/>
+        <rdfs:label>has developer</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#hasDocumenter -->
+
+    <owl:ObjectProperty rdf:about="https://www.openriskmanual.org/ns/doam#hasDocumenter">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#ModelImplementation"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <x_1.1:description>Contributor to the documentation of the model implementation</x_1.1:description>
+        <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/doam#"/>
+        <rdfs:label>has documenter</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#hasMaintainer -->
+
+    <owl:ObjectProperty rdf:about="https://www.openriskmanual.org/ns/doam#hasMaintainer">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#ModelImplementation"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <x_1.1:description>Maintainer of a source code distribution of given model</x_1.1:description>
+        <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/doam#"/>
+        <rdfs:label>has maintainer</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#hasModelImplementation -->
+
+    <owl:ObjectProperty rdf:about="https://www.openriskmanual.org/ns/doam#hasModelImplementation">
+        <owl:inverseOf rdf:resource="https://www.openriskmanual.org/ns/doam#isImplementing"/>
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#RiskModel"/>
+        <rdfs:range rdf:resource="https://www.openriskmanual.org/ns/doam#ModelImplementation"/>
+        <x_1.1:description>The source code distribution that implements the abstract model</x_1.1:description>
+        <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/doam#"/>
+        <rdfs:label>has model implementation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#hasModelInstance -->
+
+    <owl:ObjectProperty rdf:about="https://www.openriskmanual.org/ns/doam#hasModelInstance">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#RiskModel"/>
+        <rdfs:range rdf:resource="https://www.openriskmanual.org/ns/doam#ModelInstance"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/doam#"/>
+        <rdfs:label>has model instance</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#hasModelSpecification -->
+
+    <owl:ObjectProperty rdf:about="https://www.openriskmanual.org/ns/doam#hasModelSpecification">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#RiskModel"/>
+        <rdfs:range rdf:resource="https://www.openriskmanual.org/ns/doam#ModelSpecification"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/doam#"/>
+        <rdfs:label>has model specification</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#hasRepository -->
+
+    <owl:ObjectProperty rdf:about="https://www.openriskmanual.org/ns/doam#hasRepository">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#ModelImplementation"/>
+        <rdfs:range rdf:resource="https://www.openriskmanual.org/ns/doam#Repository"/>
+        <x_1.1:description>The source code repository of a model implementation</x_1.1:description>
+        <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/doam#"/>
+        <rdfs:label>has repository</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#hasScope -->
+
+    <owl:ObjectProperty rdf:about="https://www.openriskmanual.org/ns/doam#hasScope">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#AbstractModel"/>
+        <rdfs:range rdf:resource="https://www.openriskmanual.org/ns/doam#Scope"/>
+        <x_1.1:description>The scope of the model application (type of product, portfolio etc.)</x_1.1:description>
+        <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/doam#"/>
+        <rdfs:label>has application scope</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#hasTester -->
+
+    <owl:ObjectProperty rdf:about="https://www.openriskmanual.org/ns/doam#hasTester">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#ModelImplementation"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <x_1.1:description>A tester is a programmer or other qualified quality control person that is responsible for the 
+integrity of the source code distribution of a model implementation or a model instance</x_1.1:description>
+        <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/doam#"/>
+        <rdfs:label>has implementation tester</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#hasValidator -->
+
+    <owl:ObjectProperty rdf:about="https://www.openriskmanual.org/ns/doam#hasValidator">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#ModelImplementation"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <x_1.1:description>An analyst or other qualified individual providing peer review and validation of an abstract model specification</x_1.1:description>
+        <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/doam#"/>
+        <rdfs:label>has model validator</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#has_ARIMA -->
+
+    <owl:ObjectProperty rdf:about="https://www.openriskmanual.org/ns/doam#has_ARIMA">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#TimeSeriesModel"/>
+        <rdfs:range rdf:resource="https://www.openriskmanual.org/ns/doam#ARIMA"/>
+        <rdfs:label>has ARIMA</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#has_AssociationRule -->
+
+    <owl:ObjectProperty rdf:about="https://www.openriskmanual.org/ns/doam#has_AssociationRule">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#AssociationModel"/>
+        <rdfs:range rdf:resource="https://www.openriskmanual.org/ns/doam#AssociationRule"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#has_Attribute -->
+
+    <owl:ObjectProperty rdf:about="https://www.openriskmanual.org/ns/doam#has_Attribute">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#Characteristic"/>
+        <rdfs:range rdf:resource="https://www.openriskmanual.org/ns/doam#Attribute"/>
+        <rdfs:label>has attribute</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#has_BaseCumHazardTables -->
+
+    <owl:ObjectProperty rdf:about="https://www.openriskmanual.org/ns/doam#has_BaseCumHazardTables">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#GeneralRegressionModel"/>
+        <rdfs:range rdf:resource="https://www.openriskmanual.org/ns/doam#BaseCumHazardTables"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#has_BayesInputs -->
+
+    <owl:ObjectProperty rdf:about="https://www.openriskmanual.org/ns/doam#has_BayesInputs">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#NaiveBayesModel"/>
+        <rdfs:range rdf:resource="https://www.openriskmanual.org/ns/doam#BayesInputs"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#has_BayesOutput -->
+
+    <owl:ObjectProperty rdf:about="https://www.openriskmanual.org/ns/doam#has_BayesOutput">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#NaiveBayesModel"/>
+        <rdfs:range rdf:resource="https://www.openriskmanual.org/ns/doam#BayesOutput"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#has_BayesianNetworkNodes -->
+
+    <owl:ObjectProperty rdf:about="https://www.openriskmanual.org/ns/doam#has_BayesianNetworkNodes">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#BayesianNetworkModel"/>
+        <rdfs:range rdf:resource="https://www.openriskmanual.org/ns/doam#BayesianNetworkNodes"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#has_Characteristics -->
+
+    <owl:ObjectProperty rdf:about="https://www.openriskmanual.org/ns/doam#has_Characteristics">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#Scorecard"/>
+        <rdfs:range rdf:resource="https://www.openriskmanual.org/ns/doam#Characteristics"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#has_Cluster -->
+
+    <owl:ObjectProperty rdf:about="https://www.openriskmanual.org/ns/doam#has_Cluster">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#ClusteringModel"/>
+        <rdfs:range rdf:resource="https://www.openriskmanual.org/ns/doam#Cluster"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#has_ClusteringField -->
+
+    <owl:ObjectProperty rdf:about="https://www.openriskmanual.org/ns/doam#has_ClusteringField">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#ClusteringModel"/>
+        <rdfs:range rdf:resource="https://www.openriskmanual.org/ns/doam#ClusteringField"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#has_ComparisonMeasure -->
+
+    <owl:ObjectProperty rdf:about="https://www.openriskmanual.org/ns/doam#has_ComparisonMeasure">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#Predictive_Model"/>
+        <rdfs:range rdf:resource="https://www.openriskmanual.org/ns/doam#ComparisonMeasure"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#has_Constraints -->
+
+    <owl:ObjectProperty rdf:about="https://www.openriskmanual.org/ns/doam#has_Constraints">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#SequenceModel"/>
+        <rdfs:range rdf:resource="https://www.openriskmanual.org/ns/doam#Constraints"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#has_CovariateList -->
+
+    <owl:ObjectProperty rdf:about="https://www.openriskmanual.org/ns/doam#has_CovariateList">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#GeneralRegressionModel"/>
+        <rdfs:range rdf:resource="https://www.openriskmanual.org/ns/doam#CovariateList"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#has_DocumentTermMatrix -->
+
+    <owl:ObjectProperty rdf:about="https://www.openriskmanual.org/ns/doam#has_DocumentTermMatrix">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#TextModel"/>
+        <rdfs:range rdf:resource="https://www.openriskmanual.org/ns/doam#DocumentTermMatrix"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#has_EventValues -->
+
+    <owl:ObjectProperty rdf:about="https://www.openriskmanual.org/ns/doam#has_EventValues">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#GeneralRegressionModel"/>
+        <rdfs:range rdf:resource="https://www.openriskmanual.org/ns/doam#EventValues"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#has_ExponentialSmoothing -->
+
+    <owl:ObjectProperty rdf:about="https://www.openriskmanual.org/ns/doam#has_ExponentialSmoothing">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#TimeSeriesModel"/>
+        <rdfs:range rdf:resource="https://www.openriskmanual.org/ns/doam#ExponentialSmoothing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#has_FactorList -->
+
+    <owl:ObjectProperty rdf:about="https://www.openriskmanual.org/ns/doam#has_FactorList">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#GeneralRegressionModel"/>
+        <rdfs:range rdf:resource="https://www.openriskmanual.org/ns/doam#FactorList"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#has_GARCH -->
+
+    <owl:ObjectProperty rdf:about="https://www.openriskmanual.org/ns/doam#has_GARCH">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#TimeSeriesModel"/>
+        <rdfs:range rdf:resource="https://www.openriskmanual.org/ns/doam#GARCH"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#has_Item -->
+
+    <owl:ObjectProperty rdf:about="https://www.openriskmanual.org/ns/doam#has_Item">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#Predictive_Model"/>
+        <rdfs:range rdf:resource="https://www.openriskmanual.org/ns/doam#Item"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#has_Itemset -->
+
+    <owl:ObjectProperty rdf:about="https://www.openriskmanual.org/ns/doam#has_Itemset">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#Predictive_Model"/>
+        <rdfs:range rdf:resource="https://www.openriskmanual.org/ns/doam#Itemset"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#has_KNNInputs -->
+
+    <owl:ObjectProperty rdf:about="https://www.openriskmanual.org/ns/doam#has_KNNInputs">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#NearestNeighborModel"/>
+        <rdfs:range rdf:resource="https://www.openriskmanual.org/ns/doam#KNNInputs"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#has_LocalTransformations -->
+
+    <owl:ObjectProperty rdf:about="https://www.openriskmanual.org/ns/doam#has_LocalTransformations">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#Predictive_Model"/>
+        <rdfs:range rdf:resource="https://www.openriskmanual.org/ns/doam#LocalTransformations"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#has_MeanClusterDistances -->
+
+    <owl:ObjectProperty rdf:about="https://www.openriskmanual.org/ns/doam#has_MeanClusterDistances">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#AnomalyDetectionModel"/>
+        <rdfs:range rdf:resource="https://www.openriskmanual.org/ns/doam#MeanClusterDistances"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#has_MiningSchema -->
+
+    <owl:ObjectProperty rdf:about="https://www.openriskmanual.org/ns/doam#has_MiningSchema">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#Predictive_Model"/>
+        <rdfs:range rdf:resource="https://www.openriskmanual.org/ns/doam#MiningSchema"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#has_MissingValueWeights -->
+
+    <owl:ObjectProperty rdf:about="https://www.openriskmanual.org/ns/doam#has_MissingValueWeights">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#ClusteringModel"/>
+        <rdfs:range rdf:resource="https://www.openriskmanual.org/ns/doam#MissingValueWeights"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#has_ModelExplanation -->
+
+    <owl:ObjectProperty rdf:about="https://www.openriskmanual.org/ns/doam#has_ModelExplanation">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#Predictive_Model"/>
+        <rdfs:range rdf:resource="https://www.openriskmanual.org/ns/doam#ModelExplanation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#has_ModelStats -->
+
+    <owl:ObjectProperty rdf:about="https://www.openriskmanual.org/ns/doam#has_ModelStats">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#Predictive_Model"/>
+        <rdfs:range rdf:resource="https://www.openriskmanual.org/ns/doam#ModelStats"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#has_ModelVerification -->
+
+    <owl:ObjectProperty rdf:about="https://www.openriskmanual.org/ns/doam#has_ModelVerification">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#Predictive_Model"/>
+        <rdfs:range rdf:resource="https://www.openriskmanual.org/ns/doam#ModelVerification"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#has_NeuralInputs -->
+
+    <owl:ObjectProperty rdf:about="https://www.openriskmanual.org/ns/doam#has_NeuralInputs">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#NeuralNetwork"/>
+        <rdfs:range rdf:resource="https://www.openriskmanual.org/ns/doam#NeuralInputs"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#has_NeuralLayer -->
+
+    <owl:ObjectProperty rdf:about="https://www.openriskmanual.org/ns/doam#has_NeuralLayer">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#NeuralNetwork"/>
+        <rdfs:range rdf:resource="https://www.openriskmanual.org/ns/doam#NeuralLayer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#has_NeuralOutputs -->
+
+    <owl:ObjectProperty rdf:about="https://www.openriskmanual.org/ns/doam#has_NeuralOutputs">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#NeuralNetwork"/>
+        <rdfs:range rdf:resource="https://www.openriskmanual.org/ns/doam#NeuralOutputs"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#has_Node -->
+
+    <owl:ObjectProperty rdf:about="https://www.openriskmanual.org/ns/doam#has_Node">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#Predictive_Model"/>
+        <rdfs:range rdf:resource="https://www.openriskmanual.org/ns/doam#Node"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#has_Output -->
+
+    <owl:ObjectProperty rdf:about="https://www.openriskmanual.org/ns/doam#has_Output">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#Predictive_Model"/>
+        <rdfs:range rdf:resource="https://www.openriskmanual.org/ns/doam#Output"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#has_PCovMatrix -->
+
+    <owl:ObjectProperty rdf:about="https://www.openriskmanual.org/ns/doam#has_PCovMatrix">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#GeneralRegressionModel"/>
+        <rdfs:range rdf:resource="https://www.openriskmanual.org/ns/doam#PCovMatrix"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#has_PPMatrix -->
+
+    <owl:ObjectProperty rdf:about="https://www.openriskmanual.org/ns/doam#has_PPMatrix">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#GeneralRegressionModel"/>
+        <rdfs:range rdf:resource="https://www.openriskmanual.org/ns/doam#PPMatrix"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#has_ParamMatrix -->
+
+    <owl:ObjectProperty rdf:about="https://www.openriskmanual.org/ns/doam#has_ParamMatrix">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#GeneralRegressionModel"/>
+        <rdfs:range rdf:resource="https://www.openriskmanual.org/ns/doam#ParamMatrix"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#has_ParameterList -->
+
+    <owl:ObjectProperty rdf:about="https://www.openriskmanual.org/ns/doam#has_ParameterList">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#GeneralRegressionModel"/>
+        <rdfs:range rdf:resource="https://www.openriskmanual.org/ns/doam#ParameterList"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#has_RegressionTable -->
+
+    <owl:ObjectProperty rdf:about="https://www.openriskmanual.org/ns/doam#has_RegressionTable">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#Predictive_Model"/>
+        <rdfs:range rdf:resource="https://www.openriskmanual.org/ns/doam#RegressionTable"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#has_ResultField -->
+
+    <owl:ObjectProperty rdf:about="https://www.openriskmanual.org/ns/doam#has_ResultField">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#Predictive_Model"/>
+        <rdfs:range rdf:resource="https://www.openriskmanual.org/ns/doam#ResultField"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#has_RuleSet -->
+
+    <owl:ObjectProperty rdf:about="https://www.openriskmanual.org/ns/doam#has_RuleSet">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#RuleSetModel"/>
+        <rdfs:range rdf:resource="https://www.openriskmanual.org/ns/doam#RuleSet"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#has_SeasonalTrendDecomposition -->
+
+    <owl:ObjectProperty rdf:about="https://www.openriskmanual.org/ns/doam#has_SeasonalTrendDecomposition">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#TimeSeriesModel"/>
+        <rdfs:range rdf:resource="https://www.openriskmanual.org/ns/doam#SeasonalTrendDecomposition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#has_Segmentation -->
+
+    <owl:ObjectProperty rdf:about="https://www.openriskmanual.org/ns/doam#has_Segmentation">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#MiningModel"/>
+        <rdfs:range rdf:resource="https://www.openriskmanual.org/ns/doam#Segmentation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#has_Sequence -->
+
+    <owl:ObjectProperty rdf:about="https://www.openriskmanual.org/ns/doam#has_Sequence">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#SequenceModel"/>
+        <rdfs:range rdf:resource="https://www.openriskmanual.org/ns/doam#Sequence"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#has_SequenceRule -->
+
+    <owl:ObjectProperty rdf:about="https://www.openriskmanual.org/ns/doam#has_SequenceRule">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#SequenceModel"/>
+        <rdfs:range rdf:resource="https://www.openriskmanual.org/ns/doam#SequenceRule"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#has_SetPredicate -->
+
+    <owl:ObjectProperty rdf:about="https://www.openriskmanual.org/ns/doam#has_SetPredicate">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#SequenceModel"/>
+        <rdfs:range rdf:resource="https://www.openriskmanual.org/ns/doam#SetPredicate"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#has_SpectralAnalysis -->
+
+    <owl:ObjectProperty rdf:about="https://www.openriskmanual.org/ns/doam#has_SpectralAnalysis">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#TimeSeriesModel"/>
+        <rdfs:range rdf:resource="https://www.openriskmanual.org/ns/doam#SpectralAnalysis"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#has_StateSpaceModel -->
+
+    <owl:ObjectProperty rdf:about="https://www.openriskmanual.org/ns/doam#has_StateSpaceModel">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#TimeSeriesModel"/>
+        <rdfs:range rdf:resource="https://www.openriskmanual.org/ns/doam#StateSpaceModel"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#has_SupportVectorMachine -->
+
+    <owl:ObjectProperty rdf:about="https://www.openriskmanual.org/ns/doam#has_SupportVectorMachine">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#SupportVectorMachineModel"/>
+        <rdfs:range rdf:resource="https://www.openriskmanual.org/ns/doam#SupportVectorMachine"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#has_Targets -->
+
+    <owl:ObjectProperty rdf:about="https://www.openriskmanual.org/ns/doam#has_Targets">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#Predictive_Model"/>
+        <rdfs:range rdf:resource="https://www.openriskmanual.org/ns/doam#Targets"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#has_TestDistributions -->
+
+    <owl:ObjectProperty rdf:about="https://www.openriskmanual.org/ns/doam#has_TestDistributions">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#BaselineModel"/>
+        <rdfs:range rdf:resource="https://www.openriskmanual.org/ns/doam#TestDistributions"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#has_TextCorpus -->
+
+    <owl:ObjectProperty rdf:about="https://www.openriskmanual.org/ns/doam#has_TextCorpus">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#TextModel"/>
+        <rdfs:range rdf:resource="https://www.openriskmanual.org/ns/doam#TextCorpus"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#has_TextDictionary -->
+
+    <owl:ObjectProperty rdf:about="https://www.openriskmanual.org/ns/doam#has_TextDictionary">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#TextModel"/>
+        <rdfs:range rdf:resource="https://www.openriskmanual.org/ns/doam#TextDictionary"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#has_TextModelNormalization -->
+
+    <owl:ObjectProperty rdf:about="https://www.openriskmanual.org/ns/doam#has_TextModelNormalization">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#TextModel"/>
+        <rdfs:range rdf:resource="https://www.openriskmanual.org/ns/doam#TextModelNormalization"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#has_TextModelSimiliarity -->
+
+    <owl:ObjectProperty rdf:about="https://www.openriskmanual.org/ns/doam#has_TextModelSimiliarity">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#TextModel"/>
+        <rdfs:range rdf:resource="https://www.openriskmanual.org/ns/doam#TextModelSimiliarity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#has_TimeSeries -->
+
+    <owl:ObjectProperty rdf:about="https://www.openriskmanual.org/ns/doam#has_TimeSeries">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#TimeSeriesModel"/>
+        <rdfs:range rdf:resource="https://www.openriskmanual.org/ns/doam#TimeSeries"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#has_TrainingInstances -->
+
+    <owl:ObjectProperty rdf:about="https://www.openriskmanual.org/ns/doam#has_TrainingInstances">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#Predictive_Model"/>
+        <rdfs:range rdf:resource="https://www.openriskmanual.org/ns/doam#TrainingInstances"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#has_VectorDictionary -->
+
+    <owl:ObjectProperty rdf:about="https://www.openriskmanual.org/ns/doam#has_VectorDictionary">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#SupportVectorMachineModel"/>
+        <rdfs:range rdf:resource="https://www.openriskmanual.org/ns/doam#VectorDictionary"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#has_mining_schema -->
+
+    <owl:ObjectProperty rdf:about="https://www.openriskmanual.org/ns/doam#has_mining_schema"/>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#isImplementing -->
+
+    <owl:ObjectProperty rdf:about="https://www.openriskmanual.org/ns/doam#isImplementing">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#ModelImplementation"/>
+        <rdfs:range rdf:resource="https://www.openriskmanual.org/ns/doam#RiskModel"/>
+        <rdfs:comment>An abstract model description that the source code implements. It is a reference to a fully 
+defined abstract linked model</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/doam#"/>
+        <rdfs:label>implements model</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#partOfModelCategory -->
+
+    <owl:ObjectProperty rdf:about="https://www.openriskmanual.org/ns/doam#partOfModelCategory">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#RiskModel"/>
+        <rdfs:range rdf:resource="https://www.openriskmanual.org/ns/doam#RiskModelCategory"/>
+        <x_1.1:description>The model category (classification by risk model type)</x_1.1:description>
+        <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/doam#"/>
+        <rdfs:label>belongs to risk category</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#activationFunction -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/doam#activationFunction">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#NeuralNetwork"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#algorithmName -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/doam#algorithmName">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#Predictive_Model"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Can be any string describing the algorithm that was used while creating the model</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#algorithmType -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/doam#algorithmType">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#AnomalyDetectionModel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#altitude -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/doam#altitude">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#NeuralNetwork"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#avgNumberOfItemsPerTA -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/doam#avgNumberOfItemsPerTA">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#AssociationModel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#avgNumberOfItemsPerTransaction -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/doam#avgNumberOfItemsPerTransaction">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#SequenceModel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#avgNumberOfTAsPerTAGroup -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/doam#avgNumberOfTAsPerTAGroup">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#SequenceModel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#baselineMethod -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/doam#baselineMethod">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#Scorecard"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment>An informational string describing the technique used by the model designer to establish the baseline scores
+
+
+* max: Indicates that baseline scores are the maximum partial score in element Characteristic
+* min: Baseline scores are the minimum partial score in Characteristic
+* mean: Baseline scores are the mean (weighted average) partial score in Characteristic
+* neutral: Baseline scores are the risk-neutral partial score in Characteristic
+* other: Baseline scores are derived using any other technique.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#baselineScore -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/doam#baselineScore">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#Scorecard"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment>A single value to use as the baseline comparison score for all characteristics, when determining reason code ranking. Alternatively, unique baseline scores may be set for each individual Characteristic as shown below. This attribute is required only when useReasonCodes is &quot;true&quot; and attribute baselineScore is not given for each Characteristic</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#baselineStrataVariable -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/doam#baselineStrataVariable">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#GeneralRegressionModel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#bestFit -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/doam#bestFit">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#TimeSeriesModel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#categoricalScoringMethod -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/doam#categoricalScoringMethod">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#NearestNeighborModel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#characteristicName -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/doam#characteristicName">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#Characteristic"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The name of the characteristic</rdfs:comment>
+        <rdfs:label>characteristic name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#classificationMethod -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/doam#classificationMethod">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#SupportVectorMachineModel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#continuousScoringMethod -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/doam#continuousScoringMethod">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#NearestNeighborModel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#creationDate -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/doam#creationDate">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#AbstractModel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <x_1.1:description>The date on which a particular abstract model or source code distribution is released</x_1.1:description>
+        <rdfs:comment>A Model Instance does not have a creation date as instances will have a regular down/up cycle. Usage of model instances tracked via user workflows
+
+For Abstract Models, the creation date indicates when the model has becomed linked with the formal documentation available in a linked URI. It does not refer to the time of first publication.</rdfs:comment>
+        <rdfs:label>creation date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#cumulativeLink -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/doam#cumulativeLink">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#GeneralRegressionModel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#dataEndPoint -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/doam#dataEndPoint">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:label>data end point</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#description -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/doam#description">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#RiskModel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <x_1.1:description>Description of the model, code distribution or instance</x_1.1:description>
+        <rdfs:label>description</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#distParameter -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/doam#distParameter">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#GeneralRegressionModel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#distribution -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/doam#distribution">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#GeneralRegressionModel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#documentationURL -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/doam#documentationURL">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#AbstractModel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <x_1.1:description>The location where documentation about the model or its implementation can be found</x_1.1:description>
+        <rdfs:label>documentation URL</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#endTimeVariable -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/doam#endTimeVariable">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#GeneralRegressionModel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#functionName -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/doam#functionName">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#Predictive_Model"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#inferenceMethod -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/doam#inferenceMethod">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#BayesianNetworkModel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#initialScore -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/doam#initialScore">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#Scorecard"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment>Initial score contains a value which is added to the overall score whenever partial scores are summed up</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#inputDataEndPoint -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/doam#inputDataEndPoint">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#ModelInstance"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <x_1.1:description>The URI of a web resource where input data required for a model calculation are stored</x_1.1:description>
+        <rdfs:label>input data end point</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#inputDataString -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/doam#inputDataString">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#ModelInstance"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>input data string</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#instanceIdVariable -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/doam#instanceIdVariable">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#NearestNeighborModel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#isScorable -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/doam#isScorable">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#Predictive_Model"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>This attribute indicates if the model is valid for scoring</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#lengthLimit -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/doam#lengthLimit">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#AssociationModel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#linkFunction -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/doam#linkFunction">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#GeneralRegressionModel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#linkParameter -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/doam#linkParameter">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#GeneralRegressionModel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#maxNumberOfItemsPerTA -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/doam#maxNumberOfItemsPerTA">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#AssociationModel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#maxNumberOfItemsPerTransaction -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/doam#maxNumberOfItemsPerTransaction">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#SequenceModel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#maxNumberOfTAsPerTAGroup -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/doam#maxNumberOfTAsPerTAGroup">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#SequenceModel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#maxWins -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/doam#maxWins">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#SupportVectorMachineModel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#minimumConfidence -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/doam#minimumConfidence">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#AssociationModel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#minimumSupport -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/doam#minimumSupport">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#AssociationModel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#missingValuePenalty -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/doam#missingValuePenalty">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#Predictive_Model"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#missingValueStrategy -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/doam#missingValueStrategy">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#Predictive_Model"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#modelClass -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/doam#modelClass">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#ClusteringModel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#modelDF -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/doam#modelDF">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#GeneralRegressionModel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#modelName -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/doam#modelName">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#Predictive_Model"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>This is a unique identifier specifying the name of the model</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#modelType -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/doam#modelType">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#Predictive_Model"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#name -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/doam#name">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#RiskModel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <x_1.1:description>The name of the risk model maybe different from the underlying mathematical model</x_1.1:description>
+        <rdfs:comment>The name of a model, release etc.</rdfs:comment>
+        <rdfs:label>risk model name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#noTrueChildStrategy -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/doam#noTrueChildStrategy">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#Predictive_Model"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#normalizationMethod -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/doam#normalizationMethod">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#Predictive_Model"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#numberOfClusters -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/doam#numberOfClusters">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#ClusteringModel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#numberOfDocuments -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/doam#numberOfDocuments">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#TextModel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#numberOfItems -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/doam#numberOfItems">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#AssociationModel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#numberOfItemsets -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/doam#numberOfItemsets">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#AssociationModel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#numberOfLayers -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/doam#numberOfLayers">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#NeuralNetwork"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#numberOfNeighbors -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/doam#numberOfNeighbors">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#NearestNeighborModel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#numberOfRules -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/doam#numberOfRules">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#AssociationModel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#numberOfTerms -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/doam#numberOfTerms">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#TextModel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#numberOfTransactionGroups -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/doam#numberOfTransactionGroups">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#SequenceModel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#numberOfTransactions -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/doam#numberOfTransactions">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#Predictive_Model"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#offsetValue -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/doam#offsetValue">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#GeneralRegressionModel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#offsetVariable -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/doam#offsetVariable">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#GeneralRegressionModel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#optimizer -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/doam#optimizer">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#GaussianProcessModel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#outputDataEndPoint -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/doam#outputDataEndPoint">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#ModelInstance"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <x_1.1:description>The URI of a web service endpoint where the data outputs of a Model Instance can be stored</x_1.1:description>
+        <rdfs:label>output data end point</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#outputDataString -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/doam#outputDataString">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#ModelInstance"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>output data string</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#partialScore -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/doam#partialScore">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#Attribute"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:seeAlso rdf:resource="https://www.openriskmanual.org/wiki/Partial_Score"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#publication_date -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/doam#publication_date">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#AbstractModel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label>publication date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#reasonCodeAlgorithm -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/doam#reasonCodeAlgorithm">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#Scorecard"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>May be &quot;pointsAbove&quot; or &quot;pointsBelow&quot;, describing how reason codes shall be ranked, relative to the baseline score of each Characteristic, or as set at the top-level scorecard</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#repositoryURL -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/doam#repositoryURL">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#ModelImplementation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:label>repository URL</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#revision -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/doam#revision">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#ModelImplementation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <x_1.1:description>The revision number of a model or source code version release</x_1.1:description>
+        <rdfs:label>revision</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#sampleDataSize -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/doam#sampleDataSize">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#AnomalyDetectionModel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#serviceEndPoint -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/doam#serviceEndPoint">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#ModelInstance"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <x_1.1:description>The URI of a web service endpoint where the Model Instance implementing an Abstract Model can be accessed</x_1.1:description>
+        <rdfs:label>service end point</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#shortdesc -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/doam#shortdesc">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#RiskModel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <x_1.1:description>Short description of the model</x_1.1:description>
+        <rdfs:label>short description</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#splitCharacteristic -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/doam#splitCharacteristic">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#Predictive_Model"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#startTimeVariable -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/doam#startTimeVariable">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#GeneralRegressionModel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#statusVariable -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/doam#statusVariable">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#GeneralRegressionModel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#subjectIDVariable -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/doam#subjectIDVariable">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#GeneralRegressionModel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#svmRepresentation -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/doam#svmRepresentation">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#SupportVectorMachineModel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#targetFieldName -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/doam#targetFieldName">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#RegressionModel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#targetReferenceCategory -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/doam#targetReferenceCategory">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#GeneralRegressionModel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#targetVariableName -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/doam#targetVariableName">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#GeneralRegressionModel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#threshold -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/doam#threshold">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#Predictive_Model"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#trainingURL -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/doam#trainingURL">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#AbstractModel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <x_1.1:description>The URL at which online training resources regarding an abstract model, its source code or a model instance can be found</x_1.1:description>
+        <rdfs:label>training resource URL</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#trialsValue -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/doam#trialsValue">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#GeneralRegressionModel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#trialsVariable -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/doam#trialsVariable">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#GeneralRegressionModel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#useReasonCodes -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/doam#useReasonCodes">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#Scorecard"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>If &quot;false&quot;, reason codes are not computed as part of the scorecard</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#width -->
+
+    <owl:DatatypeProperty rdf:about="https://www.openriskmanual.org/ns/doam#width">
+        <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/doam#NeuralNetwork"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Person -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person">
+        <rdfs:label>foaf:Person</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#ARIMA -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#ARIMA">
+        <rdfs:subClassOf rdf:resource="https://www.openriskmanual.org/ns/doam#Model_Component"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#AbstractModel -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#AbstractModel">
+        <x_1.1:description>The theoretical (abstract) description of a distinct risk model. It is expressed as a document (paper, wiki page) that holds the human readable model description (possibly including mathematical notation)</x_1.1:description>
+        <rdfs:comment>The abstract model name can best be captured as the name of a vector valued function (with multiple possible inputs and outputs)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/doam#"/>
+        <rdfs:label>Abstract Model</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://www.openriskmanual.org/wiki/Abstract_Risk_Model"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#AnomalyDetectionModel -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#AnomalyDetectionModel">
+        <rdfs:subClassOf rdf:resource="https://www.openriskmanual.org/ns/doam#Predictive_Model"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anomaly Detection Model is one of the defined predictive models of the PMML standard (4.4)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/doam"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.openriskmanual.org/wiki/Anomaly_Detection_Model</rdfs:seeAlso>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.4.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#AssociationModel -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#AssociationModel">
+        <rdfs:subClassOf rdf:resource="https://www.openriskmanual.org/ns/doam#Predictive_Model"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Association Model is one of the defined predictive models of the PMML standard (4.4)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/doam"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.openriskmanual.org/wiki/Association_Model</rdfs:seeAlso>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.4.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#AssociationRule -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#AssociationRule">
+        <rdfs:subClassOf rdf:resource="https://www.openriskmanual.org/ns/doam#Model_Component"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#Attribute -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#Attribute">
+        <rdfs:subClassOf rdf:resource="https://www.openriskmanual.org/ns/doam#Model_Component"/>
+        <rdfs:comment>A Scorecard Attribute is a particular value of a Scorecard Characteristic.</rdfs:comment>
+        <rdfs:seeAlso rdf:resource="https://www.openriskmanual.org/wiki/Scorecard_Attribute"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#BaseCumHazardTables -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#BaseCumHazardTables">
+        <rdfs:subClassOf rdf:resource="https://www.openriskmanual.org/ns/doam#Model_Component"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#BaselineModel -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#BaselineModel">
+        <rdfs:subClassOf rdf:resource="https://www.openriskmanual.org/ns/doam#Predictive_Model"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Baseline Model is one of the defined predictive models of the PMML standard (4.4)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/doam"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.openriskmanual.org/wiki/Baseline_Model</rdfs:seeAlso>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.4.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#BayesInputs -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#BayesInputs">
+        <rdfs:subClassOf rdf:resource="https://www.openriskmanual.org/ns/doam#Model_Component"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#BayesOutput -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#BayesOutput">
+        <rdfs:subClassOf rdf:resource="https://www.openriskmanual.org/ns/doam#Model_Component"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#BayesianNetworkModel -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#BayesianNetworkModel">
+        <rdfs:subClassOf rdf:resource="https://www.openriskmanual.org/ns/doam#Predictive_Model"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bayesian Network Model is one of the defined predictive models of the PMML standard (4.4)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/doam"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.openriskmanual.org/wiki/Bayesian_Network_Model</rdfs:seeAlso>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.4.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#BayesianNetworkNodes -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#BayesianNetworkNodes">
+        <rdfs:subClassOf rdf:resource="https://www.openriskmanual.org/ns/doam#Model_Component"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#Characteristic -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#Characteristic">
+        <rdfs:subClassOf rdf:resource="https://www.openriskmanual.org/ns/doam#Model_Component"/>
+        <rdfs:comment>Characteristic (also Feature in Machine Learning context) is a general term denoting a variable or other concrete determinant that influences the Risk Profile of a system, entity, financial asset etc. It is used predominantly in development of statistical risk models</rdfs:comment>
+        <rdfs:seeAlso rdf:resource="https://www.openriskmanual.org/wiki/Characteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#Characteristics -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#Characteristics">
+        <rdfs:subClassOf rdf:resource="https://www.openriskmanual.org/ns/doam#Model_Component"/>
+        <rdfs:comment>Envelope for all scorecard characteristics</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#Cluster -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#Cluster">
+        <rdfs:subClassOf rdf:resource="https://www.openriskmanual.org/ns/doam#Model_Component"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#ClusteringField -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#ClusteringField">
+        <rdfs:subClassOf rdf:resource="https://www.openriskmanual.org/ns/doam#Model_Component"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#ClusteringModel -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#ClusteringModel">
+        <rdfs:subClassOf rdf:resource="https://www.openriskmanual.org/ns/doam#Predictive_Model"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Clustering Model is one of the defined predictive models of the PMML standard (4.4)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/doam"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.openriskmanual.org/wiki/Clustering_Model</rdfs:seeAlso>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.4.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#ComparisonMeasure -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#ComparisonMeasure">
+        <rdfs:subClassOf rdf:resource="https://www.openriskmanual.org/ns/doam#Model_Component"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#Constraints -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#Constraints">
+        <rdfs:subClassOf rdf:resource="https://www.openriskmanual.org/ns/doam#Model_Component"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#CovariateList -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#CovariateList">
+        <rdfs:subClassOf rdf:resource="https://www.openriskmanual.org/ns/doam#Model_Component"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#Data_Dictionary -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#Data_Dictionary">
+        <rdfs:label>Data Dictionary</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#DecisionTree -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#DecisionTree">
+        <rdfs:subClassOf rdf:resource="https://www.openriskmanual.org/ns/doam#Predictive_Model"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Decision Tree is one of the defined predictive models of the PMML standard (4.4)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/doam"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.openriskmanual.org/wiki/Decision_Tree</rdfs:seeAlso>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.4.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#DocumentTermMatrix -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#DocumentTermMatrix">
+        <rdfs:subClassOf rdf:resource="https://www.openriskmanual.org/ns/doam#Model_Component"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#EventValues -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#EventValues">
+        <rdfs:subClassOf rdf:resource="https://www.openriskmanual.org/ns/doam#Model_Component"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#ExponentialSmoothing -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#ExponentialSmoothing">
+        <rdfs:subClassOf rdf:resource="https://www.openriskmanual.org/ns/doam#Model_Component"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#FactorList -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#FactorList">
+        <rdfs:subClassOf rdf:resource="https://www.openriskmanual.org/ns/doam#Model_Component"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#GARCH -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#GARCH">
+        <rdfs:subClassOf rdf:resource="https://www.openriskmanual.org/ns/doam#Model_Component"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#GaussianProcessModel -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#GaussianProcessModel">
+        <rdfs:subClassOf rdf:resource="https://www.openriskmanual.org/ns/doam#Predictive_Model"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gaussian Process Model is one of the defined predictive models of the PMML standard (4.4)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/doam"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.openriskmanual.org/wiki/Gaussian_Process_Model</rdfs:seeAlso>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.4.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#GeneralRegressionModel -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#GeneralRegressionModel">
+        <rdfs:subClassOf rdf:resource="https://www.openriskmanual.org/ns/doam#Predictive_Model"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">General Regression Model is one of the defined predictive models of the PMML standard (4.4)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/doam"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.openriskmanual.org/wiki/General_Regression_Model</rdfs:seeAlso>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.4.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#GitBranch -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#GitBranch">
+        <rdfs:subClassOf rdf:resource="https://www.openriskmanual.org/ns/doam#Repository"/>
+        <x_1.1:description>Git source code branch</x_1.1:description>
+        <rdfs:isDefinedBy rdf:resource="http://www.openriskplatform.org/ns/doam#"/>
+        <rdfs:label>Git Branch</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#Item -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#Item">
+        <rdfs:subClassOf rdf:resource="https://www.openriskmanual.org/ns/doam#Model_Component"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#Itemset -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#Itemset">
+        <rdfs:subClassOf rdf:resource="https://www.openriskmanual.org/ns/doam#Model_Component"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#KNNInputs -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#KNNInputs">
+        <rdfs:subClassOf rdf:resource="https://www.openriskmanual.org/ns/doam#Model_Component"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#LocalTransformations -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#LocalTransformations">
+        <rdfs:subClassOf rdf:resource="https://www.openriskmanual.org/ns/doam#Model_Component"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#MeanClusterDistances -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#MeanClusterDistances">
+        <rdfs:subClassOf rdf:resource="https://www.openriskmanual.org/ns/doam#Model_Component"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#MiningModel -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#MiningModel">
+        <rdfs:subClassOf rdf:resource="https://www.openriskmanual.org/ns/doam#Predictive_Model"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mining Model is one of the defined predictive models of the PMML standard (4.4)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/doam"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.openriskmanual.org/wiki/Mining_Model</rdfs:seeAlso>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.4.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#MiningSchema -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#MiningSchema">
+        <rdfs:subClassOf rdf:resource="https://www.openriskmanual.org/ns/doam#Model_Component"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#Mining_Build_Task -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#Mining_Build_Task">
+        <rdfs:label>Mining Build Task</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#MissingValueWeights -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#MissingValueWeights">
+        <rdfs:subClassOf rdf:resource="https://www.openriskmanual.org/ns/doam#Model_Component"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#ModelExplanation -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#ModelExplanation">
+        <rdfs:subClassOf rdf:resource="https://www.openriskmanual.org/ns/doam#Model_Component"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#ModelImplementation -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#ModelImplementation">
+        <x_1.1:description>The source code distribution and any other artefacts implementing an abstract model</x_1.1:description>
+        <rdfs:comment>The name of the model source code is e.g. the name of the directory that contains the distribution. May include version information</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/doam#"/>
+        <rdfs:label>Model Implementation</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://www.openriskmanual.org/wiki/Model_Implementation"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#ModelInstance -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#ModelInstance">
+        <x_1.1:description>A web application instance that makes an abstract model available by executing its programmatic implementation (whether compiled or interpreted)</x_1.1:description>
+        <rdfs:comment>While risk models can be implemented in various forms, only risk models that are accessible (in-principle) online via a URL are considered - in line with the Risk Model Ontology being a web OWL ontology</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/doam#"/>
+        <rdfs:label>Model Instance</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://www.openriskmanual.org/wiki/Model_Instance"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#ModelSpecification -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#ModelSpecification">
+        <x_1.1:description>The full specification of an abstract risk model that 
+
+1) identifies and links model inputs to concrete and observable risk data sources. 
+2) expresses the model structure via e.g., enumerations of variable names, functional forms etc</x_1.1:description>
+        <rdfs:comment>The abstract model name can best be captured as the name of a vector valued function (with multiple possible inputs and outputs)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/doam#"/>
+        <rdfs:label>Model Specification</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://www.openriskmanual.org/wiki/Model_Implementation"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#ModelStats -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#ModelStats">
+        <rdfs:subClassOf rdf:resource="https://www.openriskmanual.org/ns/doam#Model_Component"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#ModelVerification -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#ModelVerification">
+        <rdfs:subClassOf rdf:resource="https://www.openriskmanual.org/ns/doam#Model_Component"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#Model_Component -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#Model_Component">
+        <rdfs:label>Model Component</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#NaiveBayesModel -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#NaiveBayesModel">
+        <rdfs:subClassOf rdf:resource="https://www.openriskmanual.org/ns/doam#Predictive_Model"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Naive Bayes Model is one of the defined predictive models of the PMML standard (4.4)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/doam"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.openriskmanual.org/wiki/Naive_Bayes_Model</rdfs:seeAlso>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.4.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#NearestNeighborModel -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#NearestNeighborModel">
+        <rdfs:subClassOf rdf:resource="https://www.openriskmanual.org/ns/doam#Predictive_Model"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nearest Neighbor Model is one of the defined predictive models of the PMML standard (4.4)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/doam"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.openriskmanual.org/wiki/Nearest_Neighbor_Model</rdfs:seeAlso>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.4.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#NeuralInputs -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#NeuralInputs">
+        <rdfs:subClassOf rdf:resource="https://www.openriskmanual.org/ns/doam#Model_Component"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#NeuralLayer -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#NeuralLayer">
+        <rdfs:subClassOf rdf:resource="https://www.openriskmanual.org/ns/doam#Model_Component"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#NeuralNetwork -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#NeuralNetwork">
+        <rdfs:subClassOf rdf:resource="https://www.openriskmanual.org/ns/doam#Predictive_Model"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Neural Network is one of the defined predictive models of the PMML standard (4.4)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/doam"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.openriskmanual.org/wiki/Neural_Network</rdfs:seeAlso>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.4.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#NeuralOutputs -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#NeuralOutputs">
+        <rdfs:subClassOf rdf:resource="https://www.openriskmanual.org/ns/doam#Model_Component"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#Node -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#Node">
+        <rdfs:subClassOf rdf:resource="https://www.openriskmanual.org/ns/doam#Model_Component"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#Output -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#Output">
+        <rdfs:subClassOf rdf:resource="https://www.openriskmanual.org/ns/doam#Model_Component"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#PCovMatrix -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#PCovMatrix">
+        <rdfs:subClassOf rdf:resource="https://www.openriskmanual.org/ns/doam#Model_Component"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#PMML_Specification -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#PMML_Specification">
+        <rdfs:subClassOf rdf:resource="https://www.openriskmanual.org/ns/doam#ModelSpecification"/>
+        <rdfs:comment>The specification of an Abstract Model using the PMML (Predictive Model Markup Language)</rdfs:comment>
+        <rdfs:label>PMML Specification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#PPMatrix -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#PPMatrix">
+        <rdfs:subClassOf rdf:resource="https://www.openriskmanual.org/ns/doam#Model_Component"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#ParamMatrix -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#ParamMatrix">
+        <rdfs:subClassOf rdf:resource="https://www.openriskmanual.org/ns/doam#Model_Component"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#ParameterList -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#ParameterList">
+        <rdfs:subClassOf rdf:resource="https://www.openriskmanual.org/ns/doam#Model_Component"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#Predictive_Model -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#Predictive_Model">
+        <rdfs:subClassOf rdf:resource="https://www.openriskmanual.org/ns/doam#AbstractModel"/>
+        <rdfs:comment>A predictive model (e.g., specified via the PMML standard)</rdfs:comment>
+        <rdfs:label>Predictive Model</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#Regression -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#Regression">
+        <rdfs:subClassOf rdf:resource="https://www.openriskmanual.org/ns/doam#Predictive_Model"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Regression is one of the defined predictive models of the PMML standard (4.4)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/doam"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.openriskmanual.org/wiki/Regression</rdfs:seeAlso>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.4.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#RegressionModel -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#RegressionModel">
+        <rdfs:subClassOf rdf:resource="https://www.openriskmanual.org/ns/doam#Predictive_Model"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Regression Model is one of the defined predictive models of the PMML standard (4.4)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/doam"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.openriskmanual.org/wiki/Regression_Model</rdfs:seeAlso>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.4.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#RegressionTable -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#RegressionTable">
+        <rdfs:subClassOf rdf:resource="https://www.openriskmanual.org/ns/doam#Model_Component"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#Repository -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#Repository">
+        <x_1.1:description>Source code repository for the model</x_1.1:description>
+        <rdfs:comment>NB: Might migrate the concept to external description of software repositories as this is not unique to the risk management domain</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/doam#"/>
+        <rdfs:label>Repository</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#ResultField -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#ResultField">
+        <rdfs:subClassOf rdf:resource="https://www.openriskmanual.org/ns/doam#Model_Component"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#RiskModel -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#RiskModel">
+        <x_1.1:description>The root class capturing all the elements of a risk model (theoretical concept, implementation and deployed instances)</x_1.1:description>
+        <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/doam#"/>
+        <rdfs:label>Risk Model</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://www.openriskmanual.org/wiki/Risk_Model"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#RiskModelCategory -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#RiskModelCategory">
+        <x_1.1:description>Risk category to which this model belongs (type of risk that is being modeled)</x_1.1:description>
+        <rdfs:comment>Placeholder. For forward compatibility to link with risk taxonomy ontologies</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/doam#"/>
+        <rdfs:label>Risk Category</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://www.openriskmanual.org/wiki/Risk_Taxonomy"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#RuleSet -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#RuleSet">
+        <rdfs:subClassOf rdf:resource="https://www.openriskmanual.org/ns/doam#Model_Component"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#RuleSetModel -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#RuleSetModel">
+        <rdfs:subClassOf rdf:resource="https://www.openriskmanual.org/ns/doam#Predictive_Model"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rule Set Model is one of the defined predictive models of the PMML standard (4.4)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/doam"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.openriskmanual.org/wiki/Rule_Set_Model</rdfs:seeAlso>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.4.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#Scope -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#Scope">
+        <x_1.1:description>Scope of model (application domain). The type of entities (within a broader domain) that are covered by the model</x_1.1:description>
+        <rdfs:comment>Placeholder. For forward compatibility with scope taxonomies</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/doam#"/>
+        <rdfs:label>Model Scope</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#Scorecard -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#Scorecard">
+        <rdfs:subClassOf rdf:resource="https://www.openriskmanual.org/ns/doam#Predictive_Model"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Scorecard is one of the defined predictive models of the PMML standard (4.4)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/doam"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.openriskmanual.org/wiki/Scorecard</rdfs:seeAlso>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.4.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#SeasonalTrendDecomposition -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#SeasonalTrendDecomposition">
+        <rdfs:subClassOf rdf:resource="https://www.openriskmanual.org/ns/doam#Model_Component"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#Segmentation -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#Segmentation">
+        <rdfs:subClassOf rdf:resource="https://www.openriskmanual.org/ns/doam#Model_Component"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#Sequence -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#Sequence">
+        <rdfs:subClassOf rdf:resource="https://www.openriskmanual.org/ns/doam#Model_Component"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#SequenceModel -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#SequenceModel">
+        <rdfs:subClassOf rdf:resource="https://www.openriskmanual.org/ns/doam#Predictive_Model"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sequence Model is one of the defined predictive models of the PMML standard (4.4)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/doam"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.openriskmanual.org/wiki/Sequence_Model</rdfs:seeAlso>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.4.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#SequenceRule -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#SequenceRule">
+        <rdfs:subClassOf rdf:resource="https://www.openriskmanual.org/ns/doam#Model_Component"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#SetPredicate -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#SetPredicate">
+        <rdfs:subClassOf rdf:resource="https://www.openriskmanual.org/ns/doam#Model_Component"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#SpectralAnalysis -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#SpectralAnalysis">
+        <rdfs:subClassOf rdf:resource="https://www.openriskmanual.org/ns/doam#Model_Component"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#StateSpaceModel -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#StateSpaceModel">
+        <rdfs:subClassOf rdf:resource="https://www.openriskmanual.org/ns/doam#Model_Component"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#SupportVectorMachine -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#SupportVectorMachine">
+        <rdfs:subClassOf rdf:resource="https://www.openriskmanual.org/ns/doam#Model_Component"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#SupportVectorMachineModel -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#SupportVectorMachineModel">
+        <rdfs:subClassOf rdf:resource="https://www.openriskmanual.org/ns/doam#Predictive_Model"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Support Vector Machine Model is one of the defined predictive models of the PMML standard (4.4)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/doam"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.openriskmanual.org/wiki/Support_Vector_Machine_Model</rdfs:seeAlso>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.4.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#Targets -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#Targets">
+        <rdfs:subClassOf rdf:resource="https://www.openriskmanual.org/ns/doam#Model_Component"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#TestDistributions -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#TestDistributions">
+        <rdfs:subClassOf rdf:resource="https://www.openriskmanual.org/ns/doam#Model_Component"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#TextCorpus -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#TextCorpus">
+        <rdfs:subClassOf rdf:resource="https://www.openriskmanual.org/ns/doam#Model_Component"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#TextDictionary -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#TextDictionary">
+        <rdfs:subClassOf rdf:resource="https://www.openriskmanual.org/ns/doam#Model_Component"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#TextModel -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#TextModel">
+        <rdfs:subClassOf rdf:resource="https://www.openriskmanual.org/ns/doam#Predictive_Model"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Text Model is one of the defined predictive models of the PMML standard (4.4)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/doam"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.openriskmanual.org/wiki/Text_Model</rdfs:seeAlso>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.4.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#TextModelNormalization -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#TextModelNormalization">
+        <rdfs:subClassOf rdf:resource="https://www.openriskmanual.org/ns/doam#Model_Component"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#TextModelSimiliarity -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#TextModelSimiliarity">
+        <rdfs:subClassOf rdf:resource="https://www.openriskmanual.org/ns/doam#Model_Component"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#TimeSeries -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#TimeSeries">
+        <rdfs:subClassOf rdf:resource="https://www.openriskmanual.org/ns/doam#Model_Component"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#TimeSeriesModel -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#TimeSeriesModel">
+        <rdfs:subClassOf rdf:resource="https://www.openriskmanual.org/ns/doam#Predictive_Model"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Time Series Model is one of the defined predictive models of the PMML standard (4.4)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/doam"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.openriskmanual.org/wiki/Time_Series_Model</rdfs:seeAlso>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.4.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#TrainingInstances -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#TrainingInstances">
+        <rdfs:subClassOf rdf:resource="https://www.openriskmanual.org/ns/doam#Model_Component"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#Transformation_Dictionary -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#Transformation_Dictionary">
+        <rdfs:label>Transformation Dictionary</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#TreeModel -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#TreeModel">
+        <rdfs:subClassOf rdf:resource="https://www.openriskmanual.org/ns/doam#Predictive_Model"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tree Model is one of the defined predictive models of the PMML standard (4.4)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/doam"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.openriskmanual.org/wiki/Tree_Model</rdfs:seeAlso>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.4.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#VectorDictionary -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#VectorDictionary">
+        <rdfs:subClassOf rdf:resource="https://www.openriskmanual.org/ns/doam#Model_Component"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.openriskmanual.org/ns/doam#Version -->
+
+    <owl:Class rdf:about="https://www.openriskmanual.org/ns/doam#Version">
+        <x_1.1:description>Version information of a published abstract model or source code release</x_1.1:description>
+        <rdfs:comment>Might migrate as not unique to this use case</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/doam#"/>
+        <rdfs:label>Model Version</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
