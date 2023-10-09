@@ -1,9 +1,17 @@
 # Risk Management Ontologies
 This repository provides serializations of current and earlier versions of the [Risk Management Ontologies](https://www.openriskmanagement.com/risk-management-ontologies/)
 
+## Business Model Risk Ontology (BMRO)
+
+The Business Model Risk Ontology is a framework that aims to represent and categorize business models sensitivity to risks using semantic web information technologies.
+
+* BMRO Version 0.1. This is the initially released version
+* Available online [here](https://www.openriskmanual.org/ns/bmro/index-en.html)
+* Annotation of BMRO terms available at the [Open Risk Manual](https://www.openriskmanual.org/wiki/Category:Business_Model_Risk_Ontology)
+
 ## Non-Performing Loan Ontology (NPLO)
 
-The Non Performing Loan Ontology is a framework that aims to represent and categorize knowledge about non performing loans using semantic web information technologies.
+The Non-Performing Loan Ontology is a framework that aims to represent and categorize knowledge about non performing loans using semantic web information technologies.
 
 * NPLO Version 0.1. This is the initially released version
 * Available online [here](https://www.openriskmanual.org/ns/nplo/index-en.html)

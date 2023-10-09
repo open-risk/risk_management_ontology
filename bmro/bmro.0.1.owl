@@ -1,0 +1,564 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="https://www.openriskmanual.org/ns/nplo/"
+         xmlns:x_1.1="http://purl.org/dc/elements/1.1/"
+         xmlns:term="http://purl.org/dc/terms/"
+         xmlns="https://www.openriskmanual.org/ns/nplo/">
+
+<owl:Ontology rdf:about="https://www.openriskmanual.org/ns/nplo">
+  <owl:versionIRI rdf:resource="0.2"/>
+  <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/bmro/ontology.xml"/>
+  <x_1.1:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Business Model Risk ontology (BMRO), described using
+        W3C RDF Schema and the Web Ontology Language OWL.
+
+Release Notes:
+- Version 0.1 Initial Release. Defines the main classes, object and data properties of the BMRO ontology
+
+</x_1.1:description>
+  <x_1.1:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string">application/rdf+xml</x_1.1:format>
+  <x_1.1:rights rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Copyright © 2023 Open Risk</x_1.1:rights>
+  <term:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">We welcome contributors to the Business Model Risk Ontology!</term:contributor>
+  <term:license rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Creative Commons Attribution 3.0 (CC BY 3.0)</term:license>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Business Model Risk Ontology is building on the Business Model Canvas</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Business Model Risk Ontology</rdfs:label>
+  <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.openriskmanual.org/wiki/Business_Model_Risk_Ontology</rdfs:seeAlso>
+  <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1</owl:versionInfo>
+</owl:Ontology>
+
+<owl:ObjectProperty rdf:about="group_includes_borrower">
+  <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/nplo"/>
+  <rdfs:domain rdf:resource="CounterpartyGroup"/>
+  <rdfs:range rdf:resource="Borrower"/>
+  <owl:inverseOf rdf:resource="cp_is_part_of_group"/>
+  <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1</owl:versionInfo>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="cp_is_part_of_group">
+  <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/nplo"/>
+  <rdfs:domain rdf:resource="Borrower"/>
+  <rdfs:range rdf:resource="CounterpartyGroup"/>
+  <owl:inverseOf rdf:resource="group_includes_borrower"/>
+  <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1</owl:versionInfo>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="has_borrowed_loan">
+  <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/nplo"/>
+  <rdfs:domain rdf:resource="Counterparty"/>
+  <rdfs:range rdf:resource="Loan"/>
+  <owl:inverseOf rdf:resource="has_borrower"/>
+  <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1</owl:versionInfo>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="has_borrower">
+  <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/nplo"/>
+  <rdfs:domain rdf:resource="Loan"/>
+  <rdfs:range rdf:resource="Counterparty"/>
+  <owl:inverseOf rdf:resource="has_borrowed_loan"/>
+  <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1</owl:versionInfo>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="collateral_concerns_borrower">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/nplo"/>
+  <rdfs:domain rdf:resource="Collateral"/>
+  <rdfs:range rdf:resource="Borrower"/>
+  <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1</owl:versionInfo>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="collateral_concerns_loan">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/nplo"/>
+  <rdfs:domain rdf:resource="Collateral"/>
+  <rdfs:range rdf:resource="Loan"/>
+  <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1</owl:versionInfo>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="collateral_has_type_of_identifier">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/nplo"/>
+  <rdfs:domain rdf:resource="Collateral"/>
+  <rdfs:range rdf:resource="Loan"/>
+  <rdfs:range rdf:resource="Borrower"/>
+  <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1</owl:versionInfo>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property_collateral_concerns_borrower">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/nplo"/>
+  <rdfs:domain rdf:resource="PropertyCollateral"/>
+  <rdfs:range rdf:resource="Borrower"/>
+  <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1</owl:versionInfo>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property_collateral_concerns_loan">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/nplo"/>
+  <rdfs:domain rdf:resource="PropertyCollateral"/>
+  <rdfs:range rdf:resource="Loan"/>
+  <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1</owl:versionInfo>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property_collateral_has_type_of_identifier">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/nplo"/>
+  <rdfs:domain rdf:resource="PropertyCollateral"/>
+  <rdfs:range rdf:resource="Loan"/>
+  <rdfs:range rdf:resource="Borrower"/>
+  <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1</owl:versionInfo>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="collection_concerns_borrower">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/nplo"/>
+  <rdfs:domain rdf:resource="ExternalCollection"/>
+  <rdfs:range rdf:resource="Borrower"/>
+  <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1</owl:versionInfo>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="collection_concerns_loan">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/nplo"/>
+  <rdfs:domain rdf:resource="ExternalCollection"/>
+  <rdfs:range rdf:resource="Loan"/>
+  <owl:propertyDisjointWith rdf:resource="collection_concerns_borrower"/>
+  <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1</owl:versionInfo>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="collection_is_undertaken_by">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/nplo"/>
+  <rdfs:domain rdf:resource="ExternalCollection"/>
+  <rdfs:range rdf:resource="CollectionAgent"/>
+  <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1</owl:versionInfo>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="forbearance_concerns_borrower">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/nplo"/>
+  <rdfs:domain rdf:resource="Forbearance"/>
+  <rdfs:range rdf:resource="Borrower"/>
+  <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1</owl:versionInfo>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="forbearance_concerns_loan">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/nplo"/>
+  <rdfs:domain rdf:resource="Forbearance"/>
+  <rdfs:range rdf:resource="Loan"/>
+  <owl:propertyDisjointWith rdf:resource="forbearance_concerns_borrower"/>
+  <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1</owl:versionInfo>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="forbearance_has_type_of_identifier">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/nplo"/>
+  <rdfs:domain rdf:resource="Forbearance"/>
+  <rdfs:range rdf:resource="Loan"/>
+  <rdfs:range rdf:resource="Borrower"/>
+  <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1</owl:versionInfo>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="enforcement_concerns_borrower">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/nplo"/>
+  <rdfs:domain rdf:resource="Enforcement"/>
+  <rdfs:range rdf:resource="Borrower"/>
+  <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1</owl:versionInfo>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="enforcement_concerns_loan">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/nplo"/>
+  <rdfs:domain rdf:resource="Enforcement"/>
+  <rdfs:range rdf:resource="Loan"/>
+  <owl:propertyDisjointWith rdf:resource="enforcement_concerns_borrower"/>
+  <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1</owl:versionInfo>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="enforcement_has_type_of_identifier">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/nplo"/>
+  <rdfs:domain rdf:resource="Enforcement"/>
+  <rdfs:range rdf:resource="Loan"/>
+  <rdfs:range rdf:resource="Borrower"/>
+  <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1</owl:versionInfo>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="DataAttribute">
+  <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/nplo"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Generic Data Property Attribute</rdfs:comment>
+  <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.openriskmanual.org/wiki/Data_Attribute</rdfs:seeAlso>
+  <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1</owl:versionInfo>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="Importance">
+  <rdfs:subPropertyOf rdf:resource="DataAttribute"/>
+  <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/nplo"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Data Importance Attribute</rdfs:comment>
+  <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.openriskmanual.org/wiki/Data_Attribute</rdfs:seeAlso>
+  <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1</owl:versionInfo>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="Critical">
+  <rdfs:subPropertyOf rdf:resource="Importance"/>
+  <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/nplo"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Data Importance Attribute</rdfs:comment>
+  <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.openriskmanual.org/wiki/Data_Attribute</rdfs:seeAlso>
+  <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1</owl:versionInfo>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="Important">
+  <rdfs:subPropertyOf rdf:resource="Importance"/>
+  <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/nplo"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Data Importance Attribute</rdfs:comment>
+  <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.openriskmanual.org/wiki/Data_Attribute</rdfs:seeAlso>
+  <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1</owl:versionInfo>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="Moderate">
+  <rdfs:subPropertyOf rdf:resource="Importance"/>
+  <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/nplo"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Data Importance Attribute</rdfs:comment>
+  <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.openriskmanual.org/wiki/Data_Attribute</rdfs:seeAlso>
+  <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1</owl:versionInfo>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="Temporality">
+  <rdfs:subPropertyOf rdf:resource="DataAttribute"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="Historical">
+  <rdfs:subPropertyOf rdf:resource="Temporality"/>
+  <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/nplo"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Data Temporality Attribute</rdfs:comment>
+  <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.openriskmanual.org/wiki/Data_Attribute</rdfs:seeAlso>
+  <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1</owl:versionInfo>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="Current">
+  <rdfs:subPropertyOf rdf:resource="Temporality"/>
+  <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/nplo"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Data Temporality Attribute</rdfs:comment>
+  <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.openriskmanual.org/wiki/Data_Attribute</rdfs:seeAlso>
+  <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1</owl:versionInfo>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="Future">
+  <rdfs:subPropertyOf rdf:resource="Temporality"/>
+  <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/nplo"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Data Temporality Attribute</rdfs:comment>
+  <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.openriskmanual.org/wiki/Data_Attribute</rdfs:seeAlso>
+  <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1</owl:versionInfo>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="Variability">
+  <rdfs:subPropertyOf rdf:resource="DataAttribute"/>
+  <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/nplo"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Data Variability Attribute</rdfs:comment>
+  <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.openriskmanual.org/wiki/Data_Attribute</rdfs:seeAlso>
+  <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1</owl:versionInfo>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="Static">
+  <rdfs:subPropertyOf rdf:resource="Variability"/>
+  <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/nplo"/>
+  <owl:propertyDisjointWith rdf:resource="Dynamic"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Data Variability Attribute</rdfs:comment>
+  <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.openriskmanual.org/wiki/Data_Attribute</rdfs:seeAlso>
+  <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1</owl:versionInfo>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="Dynamic">
+  <rdfs:subPropertyOf rdf:resource="Variability"/>
+  <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/nplo"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Data Variability Attribute</rdfs:comment>
+  <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.openriskmanual.org/wiki/Data_Attribute</rdfs:seeAlso>
+  <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1</owl:versionInfo>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="Confidentiality">
+  <rdfs:subPropertyOf rdf:resource="DataAttribute"/>
+  <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/nplo"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Data Confidentiality Attribute</rdfs:comment>
+  <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.openriskmanual.org/wiki/Data_Attribute</rdfs:seeAlso>
+  <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1</owl:versionInfo>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="Confidential">
+  <rdfs:subPropertyOf rdf:resource="Confidentiality"/>
+  <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/nplo"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Data Confidentiality Attribute</rdfs:comment>
+  <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.openriskmanual.org/wiki/Data_Attribute</rdfs:seeAlso>
+  <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1</owl:versionInfo>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="NonConfidential">
+  <rdfs:subPropertyOf rdf:resource="Confidentiality"/>
+  <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/nplo"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Data Confidentiality Attribute</rdfs:comment>
+  <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.openriskmanual.org/wiki/Data_Attribute</rdfs:seeAlso>
+  <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1</owl:versionInfo>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="VariableConfidentiality">
+  <rdfs:subPropertyOf rdf:resource="Confidentiality"/>
+  <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/nplo"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Data Confidentiality Attribute</rdfs:comment>
+  <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.openriskmanual.org/wiki/Data_Attribute</rdfs:seeAlso>
+  <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1</owl:versionInfo>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="StatisticalType">
+  <rdfs:subPropertyOf rdf:resource="DataAttribute"/>
+  <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/nplo"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Statistical Type Attribute</rdfs:comment>
+  <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.openriskmanual.org/wiki/Data_Attribute</rdfs:seeAlso>
+  <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1</owl:versionInfo>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="Categorical">
+  <rdfs:subPropertyOf rdf:resource="StatisticalType"/>
+  <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/nplo"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Statistical Type Attribute</rdfs:comment>
+  <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.openriskmanual.org/wiki/Data_Attribute</rdfs:seeAlso>
+  <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1</owl:versionInfo>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="Numerical">
+  <rdfs:subPropertyOf rdf:resource="StatisticalType"/>
+  <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/nplo"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Statistical Type Attribute</rdfs:comment>
+  <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.openriskmanual.org/wiki/Data_Attribute</rdfs:seeAlso>
+  <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1</owl:versionInfo>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="Object">
+  <rdfs:subPropertyOf rdf:resource="StatisticalType"/>
+  <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/nplo"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Statistical Type Attribute</rdfs:comment>
+  <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.openriskmanual.org/wiki/Data_Attribute</rdfs:seeAlso>
+  <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1</owl:versionInfo>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="has_borrower_type">
+  <rdfs:subPropertyOf rdf:resource="Critical"/>
+  <rdfs:subPropertyOf rdf:resource="NonConfidential"/>
+  <rdfs:domain rdf:resource="Counterparty"/>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:oneOf>
+        <rdf:Description>
+      <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Corporate</rdf:first>
+        <rdf:rest>
+        <rdf:Description>
+      <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Private Individual</rdf:first>
+        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        </rdf:Description>
+        </rdf:rest>
+        </rdf:Description>
+      </owl:oneOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+</owl:DatatypeProperty>
+
+<owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+
+<owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/format"/>
+
+<owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/rights"/>
+
+<owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
+
+<owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+
+<owl:Class rdf:about="Portfolio">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/nplo"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Portfolio Class to represent a collection of borrowers</rdfs:comment>
+  <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.openriskmanual.org/wiki/Credit_Portfolio</rdfs:seeAlso>
+  <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1</owl:versionInfo>
+</owl:Class>
+
+<owl:Class rdf:about="CounterpartyGroup">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/nplo"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Counterparty Group Class to represent complex counterparties</rdfs:comment>
+  <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.openriskmanual.org/wiki/Counterparty_Group</rdfs:seeAlso>
+  <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1</owl:versionInfo>
+</owl:Class>
+
+<owl:Class rdf:about="Counterparty">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/nplo"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The general Counterparty Class for all legal entities that are explicitly represented</rdfs:comment>
+  <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.openriskmanual.org/wiki/Counterparty</rdfs:seeAlso>
+  <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1</owl:versionInfo>
+</owl:Class>
+
+<owl:Class rdf:about="RatingAgency">
+  <rdfs:subClassOf rdf:resource="Counterparty"/>
+  <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/nplo"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Credit Rating Agency Class</rdfs:comment>
+  <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.openriskmanual.org/wiki/Credit_Rating_Agency</rdfs:seeAlso>
+  <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1</owl:versionInfo>
+</owl:Class>
+
+<owl:Class rdf:about="InsolvencyPractitioner">
+  <rdfs:subClassOf rdf:resource="Counterparty"/>
+  <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/nplo"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Insolvency Practitioner Class</rdfs:comment>
+  <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.openriskmanual.org/wiki/Insolvency_Practitioner</rdfs:seeAlso>
+  <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1</owl:versionInfo>
+</owl:Class>
+
+<owl:Class rdf:about="Receiver">
+  <rdfs:subClassOf rdf:resource="Counterparty"/>
+  <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/nplo"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Receiver Class</rdfs:comment>
+  <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.openriskmanual.org/wiki/Receiver</rdfs:seeAlso>
+  <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1</owl:versionInfo>
+</owl:Class>
+
+<owl:Class rdf:about="InsuranceProvider">
+  <rdfs:subClassOf rdf:resource="Counterparty"/>
+  <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/nplo"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Insurance Provider Class</rdfs:comment>
+  <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.openriskmanual.org/wiki/Insurance_Company</rdfs:seeAlso>
+  <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1</owl:versionInfo>
+</owl:Class>
+
+<owl:Class rdf:about="CollectionAgent">
+  <rdfs:subClassOf rdf:resource="Counterparty"/>
+  <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/nplo"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Collection Agent class</rdfs:comment>
+  <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.openriskmanual.org/wiki/Debt_Collection</rdfs:seeAlso>
+  <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1</owl:versionInfo>
+</owl:Class>
+
+<owl:Class rdf:about="Borrower">
+  <rdfs:subClassOf rdf:resource="Counterparty"/>
+  <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/nplo"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Borrower Class. A sub-class of Counterparty that applies to Lending relations</rdfs:comment>
+  <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.openriskmanual.org/wiki/Borrower</rdfs:seeAlso>
+  <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1</owl:versionInfo>
+</owl:Class>
+
+<owl:Class rdf:about="CorporateBorrower">
+  <rdfs:subClassOf rdf:resource="Borrower"/>
+  <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/nplo"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Corporate Borrower Class. A sub-class of Borrower that applies to Corporations (Firms)</rdfs:comment>
+  <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.openriskmanual.org/wiki/Corporate_Borrower</rdfs:seeAlso>
+  <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1</owl:versionInfo>
+</owl:Class>
+
+<owl:Class rdf:about="IndividualBorrower">
+  <rdfs:subClassOf rdf:resource="Borrower"/>
+  <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/nplo"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Individual Borrower Class. A sub-class of Borrower that applies to Individuals (Persons)</rdfs:comment>
+  <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.openriskmanual.org/wiki/Corporate_Borrower</rdfs:seeAlso>
+  <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1</owl:versionInfo>
+</owl:Class>
+
+<owl:Class rdf:about="Loan">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/nplo"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Loan class</rdfs:comment>
+  <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.openriskmanual.org/wiki/Loan</rdfs:seeAlso>
+  <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1</owl:versionInfo>
+</owl:Class>
+
+<owl:Class rdf:about="CorporateLoan">
+  <rdfs:subClassOf rdf:resource="Loan"/>
+  <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/nplo"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Corporate Loan class</rdfs:comment>
+  <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.openriskmanual.org/wiki/Corporate_Loan</rdfs:seeAlso>
+  <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1</owl:versionInfo>
+</owl:Class>
+
+<owl:Class rdf:about="PersonalLoan">
+  <rdfs:subClassOf rdf:resource="Loan"/>
+  <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/nplo"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Personal Loan class</rdfs:comment>
+  <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.openriskmanual.org/wiki/Personal_Loan</rdfs:seeAlso>
+  <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1</owl:versionInfo>
+</owl:Class>
+
+<owl:Class rdf:about="Collateral">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/nplo"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">General Collateral Class  (Excluding Property)</rdfs:comment>
+  <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.openriskmanual.org/wiki/Collateral</rdfs:seeAlso>
+  <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1</owl:versionInfo>
+</owl:Class>
+
+<owl:Class rdf:about="PropertyCollateral">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/nplo"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Property Collateral Class</rdfs:comment>
+  <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.openriskmanual.org/wiki/Loan_Property_Collateral</rdfs:seeAlso>
+  <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1</owl:versionInfo>
+</owl:Class>
+
+<owl:Class rdf:about="ExternalCollection">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/nplo"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">External Collection Class</rdfs:comment>
+  <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.openriskmanual.org/wiki/Debt_Collection</rdfs:seeAlso>
+  <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1</owl:versionInfo>
+</owl:Class>
+
+<owl:Class rdf:about="Forbearance">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/nplo"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Forbearance</rdfs:label>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Forbearance Class</rdfs:comment>
+  <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.openriskmanual.org/wiki/Forbearance</rdfs:seeAlso>
+  <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1</owl:versionInfo>
+</owl:Class>
+
+<owl:Class rdf:about="Enforcement">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/nplo"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Enforcement</rdfs:label>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Enforcement Class</rdfs:comment>
+  <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.openriskmanual.org/wiki/Enforcement</rdfs:seeAlso>
+  <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1</owl:versionInfo>
+</owl:Class>
+
+<owl:AllDisjointProperties>
+  <owl:members rdf:parseType="Collection">
+    <rdf:Description rdf:about="Categorical"/>
+    <rdf:Description rdf:about="Numerical"/>
+    <rdf:Description rdf:about="Object"/>
+  </owl:members>
+</owl:AllDisjointProperties>
+
+<owl:AllDisjointProperties>
+  <owl:members rdf:parseType="Collection">
+    <rdf:Description rdf:about="Confidential"/>
+    <rdf:Description rdf:about="NonConfidential"/>
+    <rdf:Description rdf:about="VariableConfidentiality"/>
+  </owl:members>
+</owl:AllDisjointProperties>
+
+<owl:AllDisjointProperties>
+  <owl:members rdf:parseType="Collection">
+    <rdf:Description rdf:about="Historical"/>
+    <rdf:Description rdf:about="Current"/>
+    <rdf:Description rdf:about="Future"/>
+  </owl:members>
+</owl:AllDisjointProperties>
+
+<owl:AllDisjointProperties>
+  <owl:members rdf:parseType="Collection">
+    <rdf:Description rdf:about="Critical"/>
+    <rdf:Description rdf:about="Important"/>
+    <rdf:Description rdf:about="Moderate"/>
+  </owl:members>
+</owl:AllDisjointProperties>
+
+
+</rdf:RDF>
