@@ -21,7 +21,7 @@ Release Notes:
 - Version 0.3 captures the distinction of Abstract Models, Specified Models, Model Source Code and Model Instances
 - Version 0.3.1 Changes the Ontology IRI to be served out of the Open Risk Manual URL</dc:description>
         <dc:format>application/rdf+xml</dc:format>
-        <dc:rights>Copyright © 2015-2019 Open Risk</dc:rights>
+        <dc:rights>Copyright © 2015 - 2024 Open Risk</dc:rights>
         <dc:title rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Description of a Model (DOAM). A Risk Model Ontology</dc:title>
         <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">We welcome contributors to the Risk Ontology!</terms:contributor>
         <terms:license rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Creative Commons Attribution 3.0 (CC BY 3.0)</terms:license>

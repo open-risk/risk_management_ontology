@@ -16408,7 +16408,7 @@
             "@type": "owl:Ontology",
             "dc:description": "The Non Performing Loan ontology (NPLO), described using W3C RDF Schema and the Web Ontology Language OWL.\n\nNPLO aims to conform as closely as possible to the published European Banking Authority NPL Data Templates\n\nRelease Notes:\n- Version 0.2 Introduces statistical type as a data attribute and explicit Borrower / Asset Class subclasses\n- Version 0.1 Initial Release. Defines the main classes, object and data properties of the NPL ontology\n\n",
             "dc:format": "application/rdf+xml",
-            "dc:rights": "Copyright © 2021 Open Risk",
+            "dc:rights": "Copyright © 2021 - 2024 Open Risk",
             "owl:versionIRI": {
                 "@id": "nplo:0.2"
             },

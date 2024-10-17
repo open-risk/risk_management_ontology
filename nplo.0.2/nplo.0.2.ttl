@@ -5946,7 +5946,7 @@ Release Notes:
 
 """^^xsd:string ;
     x_1.1:format "application/rdf+xml"^^xsd:string ;
-    x_1.1:rights "Copyright © 2021 Open Risk"^^xsd:string ;
+    x_1.1:rights "Copyright © 2021 - 2024 Open Risk"^^xsd:string ;
     term:contributor "We welcome contributors to the Non-Performing Loan Ontology!"^^xsd:string ;
     term:license "Creative Commons Attribution 3.0 (CC BY 3.0)"^^xsd:string ;
     rdfs:comment "The NPL Ontology is Conforming to the EBA NPL Templates"^^xsd:string ;

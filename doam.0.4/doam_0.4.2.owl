@@ -20,7 +20,7 @@ DOAM was inspired by the Description of a Project (DOAP) vocubulary developed by
         <x_1.1:creator>Open Risk</x_1.1:creator>
         <x_1.1:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Description of a Model (DOAM) risk model ontology, described using W3C RDF Schema and the Web Ontology Language OWL.</x_1.1:description>
         <x_1.1:format>application/rdf+xml</x_1.1:format>
-        <x_1.1:rights>Copyright © 2015-2021 Open Risk</x_1.1:rights>
+        <x_1.1:rights>Copyright © 2015 - 2024 Open Risk</x_1.1:rights>
         <x_1.1:title rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Description of a Model (DOAM). A Risk Model Ontology</x_1.1:title>
         <term:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">We welcome contributors to the Risk Model Ontology!</term:contributor>
         <term:license rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Creative Commons Attribution 3.0 (CC BY 3.0)</term:license>

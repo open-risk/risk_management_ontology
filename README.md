@@ -1,5 +1,6 @@
 # Risk Management Ontologies
-This repository provides serializations of current and earlier versions of the [Risk Management Ontologies](https://www.openriskmanagement.com/risk-management-ontologies/)
+
+This repository provides serializations of both current and early versions of [Risk Management Ontologies](https://www.openriskmanagement.com/risk-management-ontologies/)
 
 ## Business Model Risk Ontology (BMRO)
 

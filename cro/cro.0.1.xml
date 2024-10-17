@@ -1,32 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rdf:RDF xmlns="https://www.openriskmanual.org/ns/cro/" xml:base="https://www.openriskmanual.org/ns/cro/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:terms="http://purl.org/dc/terms/">
+<rdf:RDF xmlns="https://www.openriskmanual.org/ns/cro/" xml:base="https://www.openriskmanual.org/ns/cro/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xml="http://www.w3.org/XML/1998/namespace"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:terms="http://purl.org/dc/terms/">
+
     <owl:Ontology rdf:about="https://www.openriskmanual.org/ns/cro/">
         <owl:versionIRI rdf:resource="https://www.openriskmanual.org/ns/cro/0.1"/>
-        <dc:abstract>The Credit Ratings Ontology (CRO), described using W3C RDF Schema and the Web Ontology Language OWL.
+        <dc:abstract>The Credit Ratings Ontology (CRO), described using W3C RDF Schema and the Web Ontology Language
+            OWL.
 
-CRO aims to capture the core concepts involved in the production of credit ratings thereby aiding the more systematic processing of credit data.
+            CRO aims to capture the core concepts involved in the production of credit ratings thereby aiding the more
+            systematic processing of credit data.
 
-Release Notes:
-- Version 0.1 Initial Release. Defines the main classes, object and data properties of the ontology</dc:abstract>
+            Release Notes:
+            - Version 0.1 Initial Release. Defines the main classes, object and data properties of the ontology
+        </dc:abstract>
         <dc:creator>Open Risk</dc:creator>
-        <dc:description>The Credit Ratings Ontology (CRO), described using W3C RDF Schema and the Web Ontology Language OWL.
+        <dc:description>The Credit Ratings Ontology (CRO), described using W3C RDF Schema and the Web Ontology Language
+            OWL.
 
-CRO aims to capture the core concepts involved in the production of credit ratings thereby aiding the more systematic processing of credit data.
+            CRO aims to capture the core concepts involved in the production of credit ratings thereby aiding the more
+            systematic processing of credit data.
 
-Release Notes:
-- Version 0.1 Initial Release. Defines the main classes, object and data properties of the ontology
-</dc:description>
+            Release Notes:
+            - Version 0.1 Initial Release. Defines the main classes, object and data properties of the ontology
+        </dc:description>
         <dc:format>application/rdf+xml</dc:format>
-        <dc:rights>Copyright © 2021 Open Risk</dc:rights>
+        <dc:rights>Copyright © 2021 - 2024 Open Risk</dc:rights>
         <dc:title>CRO, A credit ratings ontology</dc:title>
         <terms:contributor>We welcome contributors to the Credit Ratings Ontology!</terms:contributor>
         <terms:license>Creative Commons Attribution 3.0 (CC BY 3.0)</terms:license>
-        <rdfs:comment>The elements of the CRO ontology are annotated in more detail in the Open Risk Manual under the Credit Ratings Ontology category.</rdfs:comment>
+        <rdfs:comment>The elements of the CRO ontology are annotated in more detail in the Open Risk Manual under the
+            Credit Ratings Ontology category.
+        </rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/cro.owl"/>
         <rdfs:seeAlso>https://www.openriskmanual.org/wiki/Credit_Ratings_Ontology</rdfs:seeAlso>
         <owl:versionInfo>0.1.0</owl:versionInfo>
     </owl:Ontology>
-    
 
 
     <!-- 
@@ -38,63 +49,52 @@ Release Notes:
      -->
 
 
-    
-
-
     <!-- http://purl.org/dc/elements/1.1/abstract -->
 
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/abstract"/>
-    
 
 
     <!-- http://purl.org/dc/elements/1.1/creator -->
 
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
-    
 
 
     <!-- http://purl.org/dc/elements/1.1/description -->
 
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
-    
 
 
     <!-- http://purl.org/dc/elements/1.1/format -->
 
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/format"/>
-    
 
 
     <!-- http://purl.org/dc/elements/1.1/rights -->
 
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/rights"/>
-    
 
 
     <!-- http://purl.org/dc/elements/1.1/title -->
 
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
-    
 
 
     <!-- http://purl.org/dc/terms/contributor -->
 
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
-    
 
 
     <!-- http://purl.org/dc/terms/license -->
 
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
-    
 
 
     <!-- 
@@ -106,9 +106,6 @@ Release Notes:
      -->
 
 
-    
-
-
     <!-- https://www.openriskmanual.org/ns/cro/belongs_to_rating_system -->
 
 
@@ -117,7 +114,6 @@ Release Notes:
         <rdfs:range rdf:resource="https://www.openriskmanual.org/ns/cro/CreditRatingSystem"/>
         <rdfs:comment>The credit rating system to which a credit rating scale belongs</rdfs:comment>
     </owl:ObjectProperty>
-    
 
 
     <!-- https://www.openriskmanual.org/ns/cro/has_business_model -->
@@ -128,7 +124,6 @@ Release Notes:
         <rdfs:range rdf:resource="https://www.openriskmanual.org/ns/cro/BusinessModel"/>
         <rdfs:comment>The business model of a rating agency</rdfs:comment>
     </owl:ObjectProperty>
-    
 
 
     <!-- https://www.openriskmanual.org/ns/cro/has_market_segment -->
@@ -139,7 +134,6 @@ Release Notes:
         <rdfs:range rdf:resource="https://www.openriskmanual.org/ns/cro/MarketSegment"/>
         <rdfs:comment>The market segment of a rating agency</rdfs:comment>
     </owl:ObjectProperty>
-    
 
 
     <!-- https://www.openriskmanual.org/ns/cro/is_part_of_rating_scale -->
@@ -149,7 +143,6 @@ Release Notes:
         <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/cro/CreditRating"/>
         <rdfs:range rdf:resource="https://www.openriskmanual.org/ns/cro/CreditRatingScale"/>
     </owl:ObjectProperty>
-    
 
 
     <!-- https://www.openriskmanual.org/ns/cro/is_part_or_rating_system -->
@@ -159,7 +152,6 @@ Release Notes:
         <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/cro/CreditRatingMethodology"/>
         <rdfs:range rdf:resource="https://www.openriskmanual.org/ns/cro/CreditRatingSystem"/>
     </owl:ObjectProperty>
-    
 
 
     <!-- 
@@ -171,9 +163,6 @@ Release Notes:
      -->
 
 
-    
-
-
     <!-- https://www.openriskmanual.org/ns/cro/has_CQS_mapping -->
 
 
@@ -183,7 +172,6 @@ Release Notes:
         <rdfs:comment>The mapping of a rating scale to the CQS system</rdfs:comment>
         <rdfs:seeAlso rdf:resource="https://www.openriskmanual.org/wiki/Credit_Quality_Step"/>
     </owl:DatatypeProperty>
-    
 
 
     <!-- https://www.openriskmanual.org/ns/cro/has_ESMA_id -->
@@ -194,7 +182,6 @@ Release Notes:
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>The ESMA ID of an agency (EU only)</rdfs:comment>
     </owl:DatatypeProperty>
-    
 
 
     <!-- https://www.openriskmanual.org/ns/cro/has_agency_description -->
@@ -204,7 +191,6 @@ Release Notes:
         <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/cro/CreditRatingAgency"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
-    
 
 
     <!-- https://www.openriskmanual.org/ns/cro/has_default_definition -->
@@ -216,7 +202,6 @@ Release Notes:
         <rdfs:comment>The default definition as disclosed</rdfs:comment>
         <rdfs:seeAlso rdf:resource="https://www.openriskmanual.org/wiki/Default_Definition"/>
     </owl:DatatypeProperty>
-    
 
 
     <!-- https://www.openriskmanual.org/ns/cro/has_information_model -->
@@ -243,7 +228,6 @@ Release Notes:
         </rdfs:range>
         <rdfs:comment>Whether the agency uses private information in the formation of ratings</rdfs:comment>
     </owl:DatatypeProperty>
-    
 
 
     <!-- https://www.openriskmanual.org/ns/cro/has_legal_entity_type -->
@@ -268,9 +252,9 @@ Release Notes:
                 </owl:oneOf>
             </rdfs:Datatype>
         </rdfs:range>
-        <rdfs:comment>Whether the rating concerns an issuer (legal entity) or an instrument (debt security)</rdfs:comment>
+        <rdfs:comment>Whether the rating concerns an issuer (legal entity) or an instrument (debt security)
+        </rdfs:comment>
     </owl:DatatypeProperty>
-    
 
 
     <!-- https://www.openriskmanual.org/ns/cro/has_methodology_description -->
@@ -280,7 +264,6 @@ Release Notes:
         <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/cro/CreditRatingMethodology"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
-    
 
 
     <!-- https://www.openriskmanual.org/ns/cro/has_methodology_url -->
@@ -291,7 +274,6 @@ Release Notes:
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
         <rdfs:comment>An online description of credit rating methodology</rdfs:comment>
     </owl:DatatypeProperty>
-    
 
 
     <!-- https://www.openriskmanual.org/ns/cro/has_name -->
@@ -302,7 +284,6 @@ Release Notes:
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#Name"/>
         <rdfs:comment>Agency full name</rdfs:comment>
     </owl:DatatypeProperty>
-    
 
 
     <!-- https://www.openriskmanual.org/ns/cro/has_origination_type -->
@@ -327,9 +308,10 @@ Release Notes:
                 </owl:oneOf>
             </rdfs:Datatype>
         </rdfs:range>
-        <rdfs:comment>Whether a rating has been produced internally be an institution or sourced externally by an agency</rdfs:comment>
+        <rdfs:comment>Whether a rating has been produced internally be an institution or sourced externally by an
+            agency
+        </rdfs:comment>
     </owl:DatatypeProperty>
-    
 
 
     <!-- https://www.openriskmanual.org/ns/cro/has_parent_description -->
@@ -339,7 +321,6 @@ Release Notes:
         <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/cro/CreditRatingAgency"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
-    
 
 
     <!-- https://www.openriskmanual.org/ns/cro/has_payment_profile -->
@@ -366,7 +347,6 @@ Release Notes:
         </rdfs:range>
         <rdfs:comment>The payment business model of rating agency (who pays)</rdfs:comment>
     </owl:DatatypeProperty>
-    
 
 
     <!-- https://www.openriskmanual.org/ns/cro/has_profit_profile -->
@@ -393,7 +373,6 @@ Release Notes:
         </rdfs:range>
         <rdfs:comment>Whether a rating agency is for-profit or non-profit</rdfs:comment>
     </owl:DatatypeProperty>
-    
 
 
     <!-- https://www.openriskmanual.org/ns/cro/has_risk_assessment_type -->
@@ -420,7 +399,6 @@ Release Notes:
         </rdfs:range>
         <rdfs:comment>The absolute or relative (to peers) nature of a credit rating</rdfs:comment>
     </owl:DatatypeProperty>
-    
 
 
     <!-- https://www.openriskmanual.org/ns/cro/has_risk_horizon -->
@@ -447,7 +425,6 @@ Release Notes:
         </rdfs:range>
         <rdfs:comment>The temporal risk horizon that is targeted by the credit rating</rdfs:comment>
     </owl:DatatypeProperty>
-    
 
 
     <!-- https://www.openriskmanual.org/ns/cro/has_solicitation_policy -->
@@ -474,7 +451,6 @@ Release Notes:
         </rdfs:range>
         <rdfs:comment>Whether the agency business model includes unsolicited (by the borrower) ratings</rdfs:comment>
     </owl:DatatypeProperty>
-    
 
 
     <!-- https://www.openriskmanual.org/ns/cro/has_subsidiary_policy -->
@@ -484,7 +460,6 @@ Release Notes:
         <rdfs:domain rdf:resource="https://www.openriskmanual.org/ns/cro/CreditRatingMethodology"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
-    
 
 
     <!-- https://www.openriskmanual.org/ns/cro/has_temporal_type -->
@@ -511,7 +486,6 @@ Release Notes:
         </rdfs:range>
         <rdfs:comment>The temporal currency of a rating (current versus historical)</rdfs:comment>
     </owl:DatatypeProperty>
-    
 
 
     <!-- https://www.openriskmanual.org/ns/cro/has_webpage -->
@@ -522,7 +496,6 @@ Release Notes:
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
         <rdfs:comment>An online webpage describing the credit rating agency</rdfs:comment>
     </owl:DatatypeProperty>
-    
 
 
     <!-- 
@@ -534,9 +507,6 @@ Release Notes:
      -->
 
 
-    
-
-
     <!-- https://www.openriskmanual.org/ns/cro/BusinessModel -->
 
 
@@ -546,19 +516,19 @@ Release Notes:
         <rdfs:label>BusinessModel</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://www.openriskmanual.org/wiki/Credit_Rating_Agency"/>
     </owl:Class>
-    
 
 
     <!-- https://www.openriskmanual.org/ns/cro/CreditRating -->
 
 
     <owl:Class rdf:about="https://www.openriskmanual.org/ns/cro/CreditRating">
-        <rdfs:comment>The core credit rating class encapsulating in particular all data elements required to parse credit data</rdfs:comment>
+        <rdfs:comment>The core credit rating class encapsulating in particular all data elements required to parse
+            credit data
+        </rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/cro.owl"/>
         <rdfs:label>CreditRating</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://www.openriskmanual.org/wiki/Credit_Rating"/>
     </owl:Class>
-    
 
 
     <!-- https://www.openriskmanual.org/ns/cro/CreditRatingAgency -->
@@ -570,7 +540,6 @@ Release Notes:
         <rdfs:label>CreditRatingAgency</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://www.openriskmanual.org/wiki/Credit_Rating_Agency"/>
     </owl:Class>
-    
 
 
     <!-- https://www.openriskmanual.org/ns/cro/CreditRatingMethodology -->
@@ -582,20 +551,20 @@ Release Notes:
         <rdfs:label>CreditRatingMethodology</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://www.openriskmanual.org/ns/cro/Credit%20Rating%20Methodology"/>
     </owl:Class>
-    
 
 
     <!-- https://www.openriskmanual.org/ns/cro/CreditRatingModel -->
 
 
     <owl:Class rdf:about="https://www.openriskmanual.org/ns/cro/CreditRatingModel">
-        <rdfs:comment>A concrete credit rating model (defined analytical process, including possible qualitative aspects)</rdfs:comment>
+        <rdfs:comment>A concrete credit rating model (defined analytical process, including possible qualitative
+            aspects)
+        </rdfs:comment>
         <rdfs:comment>In future revisions credit risk models will be linked with the risk model ontology</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/cro.owl"/>
         <rdfs:label>CreditRatingModel</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://www.openriskmanual.org/wiki/Credit_Rating_Model"/>
     </owl:Class>
-    
 
 
     <!-- https://www.openriskmanual.org/ns/cro/CreditRatingScale -->
@@ -607,198 +576,30 @@ Release Notes:
         <rdfs:label>CreditRatingScale</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://www.openriskmanual.org/wiki/Credit_Rating_Scale"/>
     </owl:Class>
-    
 
 
     <!-- https://www.openriskmanual.org/ns/cro/CreditRatingSystem -->
 
 
     <owl:Class rdf:about="https://www.openriskmanual.org/ns/cro/CreditRatingSystem">
-        <rdfs:comment>All concrete components (models, scales) that are used by a credit rating agency to produce a credit rating</rdfs:comment>
+        <rdfs:comment>All concrete components (models, scales) that are used by a credit rating agency to produce a
+            credit rating
+        </rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/cro.owl"/>
         <rdfs:label>CreditRatingSystem</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://www.openriskmanual.org/wiki/Credit_Rating_System"/>
     </owl:Class>
-    
 
 
     <!-- https://www.openriskmanual.org/ns/cro/MarketSegment -->
 
 
     <owl:Class rdf:about="https://www.openriskmanual.org/ns/cro/MarketSegment">
-        <rdfs:comment>The credit market segment in which a credit rating agency is active (can be multiple)</rdfs:comment>
+        <rdfs:comment>The credit market segment in which a credit rating agency is active (can be multiple)
+        </rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/cro.owl"/>
         <rdfs:label>MarketSegment</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://www.openriskmanual.org/wiki/Credit_Rating_Agency"/>
     </owl:Class>
-<script xmlns="">(function(){'use strict';
 
-if( !window.__ECSY_DEVTOOLS_INJECTED ) {
-	function compareVersions(v1, v2) {
-    if (typeof v1 !== 'string') return false;
-    if (typeof v2 !== 'string') return false;
-    v1 = v1.split('.');
-    v2 = v2.split('.');
-    const k = Math.min(v1.length, v2.length);
-    for (let i = 0; i &lt; k; ++ i) {
-        v1[i] = parseInt(v1[i], 10);
-        v2[i] = parseInt(v2[i], 10);
-        if (v1[i] &gt; v2[i]) return 1;
-        if (v1[i] &lt; v2[i]) return -1;
-    }
-    return v1.length == v2.length ? 0: (v1.length &lt; v2.length ? -1 : 1);
-	}
-
-	function sendMessage( type, data ) {
-		if (window.__ECSY_REMOTE_DEVTOOLS_INJECTED &amp;&amp; window.__ECSY_REMOTE_DEVTOOLS.connection) {
-			window.__ECSY_REMOTE_DEVTOOLS.connection.send({
-				id: 'ecsy-devtools',
-				method: type,
-				data: JSON.stringify(data)
-			});
-		}
-		window.postMessage({
-			id: 'ecsy-devtools',
-			method: type,
-			data,
-		}, '*');
-	}
-
-	window.addEventListener('ecsy-world-created', e =&gt; {
-		if (!window.__ECSY_DEVTOOLS) {
-			window.__ECSY_DEVTOOLS = {
-				worlds: []
-			};
-		}
-
-		var world = e.detail.world;
-		var version = e.detail.version;
-		if (!version || compareVersions(version, "0.1.4") &lt; 0) {
-			console.info("ECSY detected but this version is not compatible with the devtools installed");
-			return;
-		}
-
-		window.__ECSY_DEVTOOLS.worlds.push(world);
-		window.__ECSY_DEVTOOLS.ecsyVersion = version;
-
-		var stats = {
-			processDeferredRemoval: 0
-		};
-
-		var _pools = {};
-
-		var oriWorldExecute = world.execute;
-
-		world.execute = function(delta, time) {
-			oriWorldExecute.apply(world, arguments);
-			window.__ECSY_DEVTOOLS.refreshStats();
-		}
-
-		window.__ECSY_DEVTOOLS.refreshStats = function() {
-			let startTime = performance.now();
-			const entityManager = world.entityManager;
-
-			const deferredRemoval = {
-				enabled: entityManager.deferredRemovalEnabled,
-				executeTime: stats.processDeferredRemoval,
-				entitiesToRemove: entityManager.entitiesToRemove.length,
-				entitiesWithComponentsToRemove: entityManager.entitiesWithComponentsToRemove.length,
-				totalComponentsToRemove: entityManager.entitiesWithComponentsToRemove.reduce((a, c) =&gt; a + c._ComponentTypesToRemove.length, 0)
-			};
-
-			const queries = Object.values(world.entityManager._queryManager._queries).map(q =&gt; q.toJSON());
-
-			const systems = world.systemManager._systems.map(system =&gt; {
-				let data = system.toJSON();
-				for (name in data.queries) {
-					var query = data.queries[name];
-					var queryData = queries.find(q =&gt; q.key === query.key);
-					query.numEntities = queryData.numEntities;
-					query.components = queryData.components;
-				}
-
-				return data;
-			});
-
-			systems.sort((a, b) =&gt; {
-				return a.priority - b.priority || a.order - b.order;
-			});
-
-			// Reset time for next step
-			// @todo Do it on core?
-			world.systemManager._systems.forEach(system =&gt; {
-				system.executeTime = 0;
-			});
-
-
-			let componentsNum = world.componentsManager.numComponents;
-			let components = {};
-			for (let id in componentsNum) {
-				var component = world.componentsManager.Components[id];
-				const name = component.getName ? component.getName() : id;
-
-				components[name] = {
-					count: componentsNum[id],
-					type: component.isTagComponent ? 'tag' :
-								(component.isComponent ? 'component' :
-								(component.isSystemStateComponent ? 'systemstate' : 'none'))
-				};
-			}
-
-			let componentsPools = {};
-			for (name in world.componentsManager._componentPool) {
-				if (!_pools[name]) {
-					_pools[name] = {
-						lastPoolSize: 0
-					};
-				}
-
-				let pool = world.componentsManager._componentPool[name];
-				if (pool !== undefined) {
-					var cName = pool.T.name;
-					componentsPools[cName] = {
-						valid: pool.isObjectPool,
-						used: pool.totalUsed(),
-						free: pool.totalFree(),
-						size: pool.totalSize(),
-						increased: pool.totalSize() &gt; _pools[name].lastPoolSize
-					}
-	
-					_pools[name].lastPoolSize = pool.totalSize();	
-				}
-			};
-
-			let data = {
-				world: {
-					enabled: world.enabled
-				},
-				lastExecutedSystem: world.systemManager.lastExecutedSystem ? world.systemManager.lastExecutedSystem.constructor.name : '',
-				numEntities: world.entityManager._entities.length,
-				systems: systems,
-				queries: queries,
-				components: components,
-				deferredRemoval: deferredRemoval,
-				componentsPools: componentsPools,
-				ecsyVersion: version,
-				statsComputeTime: performance.now() - startTime
-			};
-			sendMessage('refreshData', data);
-		}
-
-		sendMessage('worldCreated', {});
-	});
-
-	function log() {
-		var args = Array.from( arguments );
-		 args.unshift( 'background: #9999ff; color: #ffffff;' );
-		args.unshift( `%c ECSY Injector ` );
-
-		console.log.apply( console, args );
-	}
-
-	// log( 'ECSYInspector injected', document.location.href );
-
-	window.__ECSY_DEVTOOLS_INJECTED = true;
-}
-})();</script></rdf:RDF>
-<!-- Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/ -->
+</rdf:RDF>

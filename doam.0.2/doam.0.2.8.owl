@@ -21,7 +21,7 @@
      xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="http://www.openriskplatform.org/ns/doam#">
         <owl:versionInfo rdf:datatype="&xsd;decimal">0.2</owl:versionInfo>
-        <dc:rights>Copyright © 2015 OpenRisk</dc:rights>
+        <dc:rights>Copyright © 2015 - 2024 Open Risk</dc:rights>
         <dc:description>The Description of a Model (DOAM) ontology, described using W3C RDF Schema and the Web Ontology Language OWL. Inspired and encompassing elements from the Description of a Project (DOAP) vocubulary developed by Edd Dumbill and used widely for the annotation of open source applications</dc:description>
         <dc:title>Description of a Model (DOAM) ontology</dc:title>
         <dc:creator>OpenRisk</dc:creator>

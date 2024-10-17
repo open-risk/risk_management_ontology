@@ -18,10 +18,10 @@ NPLO aims to conform as closely as possible to the published European Banking Au
 Release Notes:
 - Version 0.1 Defines the main classes, object and data properties of the ontology</dc:description>
         <dc:format>application/rdf+xml</dc:format>
-        <dc:rights>Copyright © 2021 Open Risk</dc:rights>
+        <dc:rights>Copyright © 2021 - 2024 Open Risk</dc:rights>
         <dc:title>Non Performing Loan Ontology (NPLO)</dc:title>
         <terms:license>Creative Commons Attribution 3.0 (CC BY 3.0)</terms:license>
-        <rdfs:comment>The Non Performing Loan Ontology is still in active development. Feedback, ideas, use cases are encouraged</rdfs:comment>
+        <rdfs:comment>The Non-Performing Loan Ontology is still in active development. Feedback, ideas, use cases are encouraged</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://www.openriskmanual.org/ns/nplo.owl"/>
         <rdfs:seeAlso>https://www.openriskmanual.org/wiki/EBA_NPL_Template</rdfs:seeAlso>
         <owl:versionInfo>0.1</owl:versionInfo>
